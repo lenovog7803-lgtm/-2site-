@@ -1,0 +1,210 @@
+<!DOCTYPE html><html class="light scroll-smooth" lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Контакты | A2Group - Профессиональная Логистика</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(255,255,255,0.4); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.5); }
+        .hero-gradient { background: radial-gradient(circle at 80% 20%, rgba(230,137,38,0.08) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(230,137,38,0.05) 0%, transparent 40%); }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{
+            "outline":"#877364","secondary":"#5f5e5e","inverse-on-surface":"#f0f1f2",
+            "surface-container":"#edeeef","surface-pure":"#FFFFFF","primary-container":"#e68926",
+            "inverse-surface":"#2e3132","surface-variant":"#e1e3e4","surface-dim":"#d9dadb",
+            "surface-container-low":"#f3f4f5","on-tertiary-container":"#303743","on-secondary":"#ffffff",
+            "surface-tint":"#8e4e00","surface-muted":"#F8F9FA","on-secondary-fixed":"#1c1b1b",
+            "secondary-container":"#e2dfde","industrial-orange-glare":"#FF9F3D","tertiary":"#585f6c",
+            "primary-fixed-dim":"#ffb778","status-success":"#10B981","surface":"#f8f9fa",
+            "outline-variant":"#dac2b0","surface-container-highest":"#e1e3e4","tertiary-fixed":"#dce2f3",
+            "surface-container-high":"#e7e8e9","border-glass":"rgba(255,255,255,0.4)",
+            "surface-container-lowest":"#ffffff","on-background":"#191c1d","on-primary":"#ffffff",
+            "on-surface-variant":"#544436","surface-bright":"#f8f9fa","primary":"#8e4e00",
+            "error":"#ba1a1a","tertiary-container":"#99a0af","primary-fixed":"#ffdcc1",
+            "on-primary-container":"#552c00","background":"#f8f9fa","on-primary-fixed":"#2e1500","on-surface":"#191c1d"
+        }, spacing:{"gutter":"24px","container-max":"1440px","margin-mobile":"16px","unit":"4px","margin-desktop":"40px"},
+        fontFamily:{"headline-md":["Inter"],"body-md":["Inter"],"display-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"label-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"]},
+        fontSize:{
+            "headline-md":["24px",{"lineHeight":"32px","fontWeight":"700"}],
+            "body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],
+            "display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"800"}],
+            "headline-lg-mobile":["28px",{"lineHeight":"34px","fontWeight":"700"}],
+            "body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],
+            "headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],
+            "headline-sm":["18px",{"lineHeight":"24px","fontWeight":"700"}],
+            "label-lg":["14px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],
+            "body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],
+            "label-md":["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}]
+        }}}}
+    </script>
+</head>
+<body class="bg-surface-pure font-body-md text-on-surface selection:bg-primary-fixed">
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-surface-pure/70 backdrop-blur-xl border-b border-glass shadow-sm">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-display-lg font-extrabold text-on-surface cursor-pointer" href="index.html">A2Group</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200 cursor-pointer" href="index.html">ГЛАВНАЯ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200 cursor-pointer" href="services.html">УСЛУГИ</a>
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-200 cursor-pointer" href="contacts.html">КОНТАКТЫ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200 cursor-pointer" href="fleet.html">АВТОПАРК</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+<a class="bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3 rounded hover:bg-industrial-orange-glare active:scale-95 transition-all cursor-pointer uppercase" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
+</div>
+</header>
+<main class="pt-20">
+<section class="relative min-h-[921px] flex items-center overflow-hidden hero-gradient">
+<div class="absolute top-0 right-0 w-1/2 h-full z-0 opacity-20 pointer-events-none reveal active">
+<img alt="Logistics center" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsyxG2gjQr4B_2H1qd94Da3DadC9xCBXuR05p9ge_0OgdFvdekGT0UKgon8G1Eo3-gxbUw7eSidQ-PmowE2LtsIOt2J2M_xwIcZuAFFqr0BM3pTz2PFfi9_Uwl6ajh32H-7MRLR8kXtrFJf6F-wv_kcNT0l0hsxJbJwUiepS2X77smUYRP2kBeCoOBD8-MLZ6hpIPUv7zXyiVFJeVuWu3cJrrHIa37tLPRKeJDxzlVcsPvDh7eRg58msbm3QmvoIJcq59ph9ykP9WO">
+</div>
+<div class="max-w-container-max mx-auto px-gutter w-full grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 py-16">
+<div class="flex flex-col justify-center space-y-8 reveal active">
+<div class="space-y-4">
+<span class="inline-block py-1 px-3 bg-primary-fixed text-on-primary-fixed font-label-md text-label-md rounded uppercase tracking-wider">СВЯЖИТЕСЬ С НАМИ</span>
+<h1 class="font-display-lg text-display-lg leading-tight text-on-surface">Прозрачная логистика <br><span class="text-primary-container">начинается здесь</span></h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">Готовы оптимизировать ваши цепи поставок? Наша команда экспертов на связи 24/7 для решения сложнейших задач глобального транзита.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center gap-3 p-6 glass-panel rounded-xl shadow-sm hover-lift border-white/40">
+<span class="material-symbols-outlined text-primary-container text-3xl">mail</span>
+<div>
+<div class="font-label-md text-label-md text-secondary uppercase opacity-70">Эл. почта</div>
+<a class="font-headline-sm text-headline-sm hover:text-primary transition-colors" href="mailto:info@a2group.by">info@a2group.by</a>
+</div>
+</div>
+<div class="flex items-center gap-3 p-6 glass-panel rounded-xl shadow-sm hover-lift border-white/40">
+<span class="material-symbols-outlined text-primary-container text-3xl">call</span>
+<div>
+<div class="font-label-md text-label-md text-secondary uppercase opacity-70">Телефон</div>
+<a class="font-headline-sm text-headline-sm hover:text-primary transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl shadow-sm hover-lift border-l-4 border-l-primary-container border-t-white/40 border-r-white/40 border-b-white/40">
+<h3 class="font-label-lg text-label-lg mb-6 uppercase tracking-wider text-secondary">Наши офисы</h3>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary-container">location_on</span>
+<div><p class="font-headline-sm text-headline-sm mb-1">Минск</p><p class="font-body-md text-body-md text-secondary">ул. Тимирязева 67, оф. 1201</p></div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary-container">location_on</span>
+<div><p class="font-headline-sm text-headline-sm mb-1">Москва</p><p class="font-body-md text-body-md text-secondary">Пресненская наб. 12, Башня "Федерация"</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-center lg:justify-end reveal active">
+<div class="w-full max-w-md glass-panel p-10 rounded-xl shadow-[0_30px_60px_rgba(0,0,0,0.1)] border border-white/60" id="form-container">
+<div class="transition-opacity duration-300" id="contact-form-content">
+<h2 class="font-headline-lg text-headline-lg mb-8">Оставьте заявку</h2>
+<form class="space-y-6" onsubmit="handleFormSubmit(event)">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-secondary ml-1 uppercase opacity-80">Ваше имя</label>
+<input class="w-full px-4 py-3.5 bg-white/50 backdrop-blur-sm border border-white/40 focus:border-primary-container focus:ring-0 rounded-lg transition-all placeholder:text-outline-variant/60" placeholder="Иван Иванов" required type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-secondary ml-1 uppercase opacity-80">Телефон</label>
+<input class="w-full px-4 py-3.5 bg-white/50 backdrop-blur-sm border border-white/40 focus:border-primary-container focus:ring-0 rounded-lg transition-all placeholder:text-outline-variant/60" placeholder="+375 (__) ___-__-__" required type="tel">
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-secondary ml-1 uppercase opacity-80">Сообщение</label>
+<textarea class="w-full px-4 py-3.5 bg-white/50 backdrop-blur-sm border border-white/40 focus:border-primary-container focus:ring-0 rounded-lg transition-all placeholder:text-outline-variant/60 resize-none" placeholder="Опишите ваш груз или маршрут..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-[#E68926] text-on-primary font-headline-sm text-headline-sm rounded-lg hover:bg-industrial-orange-glare transition-all shadow-lg shadow-primary-container/30 active:scale-95 uppercase tracking-wide" type="submit">СВЯЗАТЬСЯ</button>
+<p class="text-center font-body-sm text-body-sm text-secondary px-4 opacity-70">Нажимая кнопку, вы соглашаетесь с Политикой конфиденциальности.</p>
+</form>
+</div>
+<div class="hidden text-center space-y-6 py-10" id="success-state">
+<div class="w-20 h-20 bg-status-success/10 rounded-full flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-status-success text-5xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg">Данные приняты</h2>
+<p class="font-body-md text-body-md text-secondary">Логист производит расчет стоимости. Ставка будет отправлена по SMS/Telegram в течение 15 минут.</p>
+<button class="text-primary font-label-lg uppercase tracking-widest hover:underline pt-4" onclick="resetForm()">Вернуться назад</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface-muted">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+<div class="md:col-span-5 reveal active">
+<h2 class="font-headline-lg text-headline-lg mb-6">Локальное присутствие <br>Глобальный охват</h2>
+<p class="font-body-md text-body-md text-secondary mb-8 leading-relaxed">Мы располагаем собственными хабами в ключевых логистических узлах СНГ и Европы.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4"><span class="w-12 h-1 bg-primary-container rounded-full"></span><span class="font-label-lg text-label-lg uppercase text-on-surface">Собственный парк: 250+ единиц</span></div>
+<div class="flex items-center gap-4"><span class="w-12 h-1 bg-primary-container rounded-full"></span><span class="font-label-lg text-label-lg uppercase text-on-surface">Склады класса A+</span></div>
+</div>
+</div>
+<div class="md:col-span-7 reveal active">
+<div class="h-[400px] w-full rounded-xl overflow-hidden glass-panel relative shadow-xl border-white/40">
+<img alt="Map" class="w-full h-full object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoy8mo1-tU9UftYpWUEepJPkiD5WUn31DdAP4nEKxzS3fNUjEcNCbBwNFjas0Uduv8OB3kFQPRTT8abv_G-bOdnc6vYQ-JAEzOthMEMqX9s-tIxbr3T0uuuV_hGIHdqcWsn5KWQ4ijzgIZmNChCtdIX4gOG34CmyKL6yeHRZQQoU1vHaMp8wXxCuB6g9cVkL1gJNzrbx5mogt60UoanXJhwXQWEVDS_-XBv-UIsb6kjsNKkZnvjqTWhvgotIXmYZWDBkadjqylg5ar">
+<div class="absolute top-1/2 left-1/3 w-4 h-4 bg-primary-container rounded-full animate-ping"></div>
+<div class="absolute top-1/2 left-1/3 w-4 h-4 bg-primary-container rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-12 px-gutter grid grid-cols-1 md:grid-cols-4 gap-8 bg-inverse-surface reveal active">
+<div class="space-y-4">
+<span class="font-headline-sm text-headline-sm text-surface-pure cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">A2Group</span>
+<p class="font-body-sm text-body-sm text-surface-variant max-w-xs">Профессиональные логистические решения для бизнеса любого масштаба.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Навигация</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="index.html">ГЛАВНАЯ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="services.html">УСЛУГИ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="contacts.html">КОНТАКТЫ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="fleet.html">АВТОПАРК</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Контакты</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="mailto:info@a2group.by">info@a2group.by</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Юридическая информация</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="#">Политика конфиденциальности</a>
+<span class="font-body-sm text-body-sm text-surface-variant mt-4 opacity-50">© 2024 A2Group. Все права защищены.</span>
+</div>
+</footer>
+<script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const formContent = document.getElementById('contact-form-content');
+        const successState = document.getElementById('success-state');
+        formContent.style.opacity = '0';
+        setTimeout(() => {
+            formContent.classList.add('hidden');
+            successState.classList.remove('hidden');
+            successState.style.opacity = '1';
+        }, 300);
+    }
+    function resetForm() {
+        const formContent = document.getElementById('contact-form-content');
+        const successState = document.getElementById('success-state');
+        successState.style.opacity = '0';
+        setTimeout(() => {
+            successState.classList.add('hidden');
+            formContent.classList.remove('hidden');
+            formContent.style.opacity = '1';
+        }, 300);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+</script>
+</body></html>

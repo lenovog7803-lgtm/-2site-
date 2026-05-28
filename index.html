@@ -1,0 +1,371 @@
+<!DOCTYPE html><html class="light scroll-smooth" lang="ru" style="scroll-behavior: smooth;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>A2Group — Международная логистика РБ ↔ РФ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 80% 20%, rgba(230, 137, 38, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(230, 137, 38, 0.05) 0%, transparent 40%);
+        }
+        .active-tab-indicator {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @keyframes fadeInUpHero {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-hero-fade-in {
+            animation: fadeInUpHero 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .animate-hero-fade-in { transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+        }
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(230, 137, 38, 0.1);
+        }
+        .btn-premium {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-premium:hover {
+            box-shadow: 0 0 20px rgba(230, 137, 38, 0.4);
+            transform: scale(1.05);
+        }
+        .btn-premium:active { transform: scale(0.95); }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline": "#877364",
+                        "secondary": "#5f5e5e",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container": "#edeeef",
+                        "surface-pure": "#FFFFFF",
+                        "inverse-surface": "#2e3132",
+                        "inverse-primary": "#ffb778",
+                        "surface-variant": "#e1e3e4",
+                        "surface-dim": "#d9dadb",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-container": "#E68926",
+                        "on-tertiary-container": "#303743",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#8e4e00",
+                        "surface-muted": "#F8F9FA",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#e2dfde",
+                        "industrial-orange-glare": "#FF9F3D",
+                        "tertiary": "#585f6c",
+                        "primary-fixed-dim": "#ffb778",
+                        "status-success": "#10B981",
+                        "surface": "#f8f9fa",
+                        "outline-variant": "#dac2b0",
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed": "#dce2f3",
+                        "surface-container-high": "#e7e8e9",
+                        "border-glass": "rgba(255, 255, 255, 0.4)",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#544436",
+                        "surface-bright": "#f8f9fa",
+                        "primary": "#E68926",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#99a0af",
+                        "primary-fixed": "#ffdcc1",
+                        "on-primary-container": "#552c00",
+                        "background": "#f8f9fa",
+                        "on-primary-fixed": "#2e1500",
+                        "on-surface": "#191c1d"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "margin-desktop": "40px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"], "body-md": ["Inter"], "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"],
+                        "headline-sm": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["24px",{"lineHeight":"32px","fontWeight":"800"}],
+                        "body-md": ["16px",{"lineHeight":"24px","fontWeight":"400"}],
+                        "display-lg": ["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"800"}],
+                        "headline-lg-mobile": ["28px",{"lineHeight":"34px","fontWeight":"800"}],
+                        "body-sm": ["14px",{"lineHeight":"20px","fontWeight":"400"}],
+                        "headline-lg": ["32px",{"lineHeight":"40px","fontWeight":"800"}],
+                        "headline-sm": ["18px",{"lineHeight":"24px","fontWeight":"800"}],
+                        "label-lg": ["14px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],
+                        "body-lg": ["18px",{"lineHeight":"28px","fontWeight":"400"}],
+                        "label-md": ["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-pure font-body-md text-on-surface selection:bg-primary-fixed antialiased">
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-surface-pure/80 backdrop-blur-xl border-b border-glass shadow-sm" id="top">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-display-lg font-extrabold text-on-surface cursor-pointer" href="index.html">A2Group</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary-container transition-all duration-200 cursor-pointer" href="index.html">ГЛАВНАЯ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-all duration-200 cursor-pointer" href="services.html">УСЛУГИ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-all duration-200 cursor-pointer" href="fleet.html">АВТОПАРК</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-all duration-200 cursor-pointer" href="contacts.html">КОНТАКТЫ</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+<a class="btn-premium bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-xl shadow-lg shadow-primary/20 cursor-pointer" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
+</div>
+</header>
+<main class="pt-20">
+<section class="relative min-h-[921px] flex items-center overflow-hidden hero-gradient" id="lead-form">
+<div class="absolute top-0 right-0 w-1/2 h-full z-0 opacity-20 pointer-events-none reveal active">
+<img alt="Logistics background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsyxG2gjQr4B_2H1qd94Da3DadC9xCBXuR05p9ge_0OgdFvdekGT0UKgon8G1Eo3-gxbUw7eSidQ-PmowE2LtsIOt2J2M_xwIcZuAFFqr0BM3pTz2PFfi9_Uwl6ajh32H-7MRLR8kXtrFJf6F-wv_kcNT0l0hsxJbJwUiepS2X77smUYRP2kBeCoOBD8-MLZ6hpIPUv7zXyiVFJeVuWu3cJrrHIa37tLPRKeJDxzlVcsPvDh7eRg58msbm3QmvoIJcq59ph9ykP9WO">
+</div>
+<div class="max-w-container-max mx-auto px-gutter w-full grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 py-16">
+<div class="flex flex-col justify-center space-y-8 reveal active">
+<div class="space-y-4">
+<span class="inline-block py-1 px-3 bg-primary/10 text-primary font-label-md text-label-md rounded uppercase tracking-wider animate-hero-fade-in" style="animation-delay: 0.1s;">Грузоперевозки 2024</span>
+<h1 class="font-display-lg text-display-lg leading-tight text-on-surface animate-hero-fade-in" style="animation-delay: 0.2s;">
+МЕЖДУНАРОДНАЯ ЛОГИСТИКА <span class="text-primary">РБ ↔ РФ</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl animate-hero-fade-in" style="animation-delay: 0.4s;">
+Ежедневные выходы автотранспорта под любые объемы. Гарантия фиксированной ставки и автоматизированный документооборот.
+</p>
+</div>
+<div class="flex flex-wrap gap-4 animate-hero-fade-in" style="animation-delay: 0.6s;">
+<div class="flex items-center gap-3 p-4 glass-panel rounded-xl shadow-sm hover-lift cursor-pointer">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<div><div class="font-headline-sm text-headline-sm">500+</div><div class="font-body-sm text-body-sm text-secondary">Рейсов в месяц</div></div>
+</div>
+<div class="flex items-center gap-3 p-4 glass-panel rounded-xl shadow-sm hover-lift cursor-pointer">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div><div class="font-headline-sm text-headline-sm">100%</div><div class="font-body-sm text-body-sm text-secondary">Страхование груза</div></div>
+</div>
+<div class="flex items-center gap-3 p-4 glass-panel rounded-xl shadow-sm w-full md:w-auto hover-lift cursor-pointer">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">payments</span>
+<div><div class="font-headline-sm text-headline-sm uppercase">ОТСРОЧКА ПЛАТЕЖА</div><div class="font-body-sm text-body-sm text-secondary">Гибкие условия оплаты для партнеров.</div></div>
+</div>
+<div class="flex items-center gap-3 p-4 glass-panel rounded-xl shadow-sm hover-lift cursor-pointer">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<div><div class="font-headline-sm text-headline-sm uppercase">СВЯЗЬ 24/7</div><div class="font-body-sm text-body-sm text-secondary">Активная поддержка</div></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-center lg:justify-end reveal active">
+<div class="w-full max-w-md glass-panel p-8 rounded-[2rem] shadow-2xl border border-white/60 animate-hero-fade-in" style="animation-delay: 0.8s;">
+<div class="relative flex p-1 bg-surface-muted rounded-full mb-8">
+<div class="absolute h-[calc(100%-8px)] w-[calc(50%-4px)] bg-white shadow-md rounded-full active-tab-indicator left-1 top-1" id="tab-indicator"></div>
+<button class="relative z-10 flex-1 py-3 font-label-lg text-label-lg text-on-surface transition-colors" id="btn-call" onclick="switchTab('call')">Быстрый звонок</button>
+<button class="relative z-10 flex-1 py-3 font-label-lg text-label-lg text-secondary transition-colors" id="btn-calc" onclick="switchTab('calc')">Расчет рейса</button>
+</div>
+<div class="space-y-6" id="tab-content-call">
+<div class="space-y-4">
+<div class="space-y-1"><label class="font-label-md text-label-md text-secondary ml-1">Ваше имя</label>
+<input class="w-full px-4 py-3 bg-white/50 border-transparent focus:border-primary focus:ring-0 rounded-xl transition-all placeholder:text-outline-variant" placeholder="Александр" type="text"></div>
+<div class="space-y-1"><label class="font-label-md text-label-md text-secondary ml-1">Телефон</label>
+<input class="w-full px-4 py-3 bg-white/50 border-transparent focus:border-primary focus:ring-0 rounded-xl transition-all placeholder:text-outline-variant" placeholder="+375 (__) ___-__-__" type="tel"></div>
+</div>
+<button class="btn-premium w-full py-4 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-xl transition-all shadow-lg shadow-primary/20" onclick="window.location.href='contacts.html'">Связаться за 5 минут</button>
+<p class="text-center font-body-sm text-body-sm text-secondary px-4">Мы перезвоним вам в течение 5 минут для уточнения деталей</p>
+</div>
+<div class="hidden space-y-6" id="tab-content-calc">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1"><label class="font-label-md text-label-md text-secondary ml-1">Откуда</label>
+<input class="w-full px-4 py-3 bg-white/50 border-transparent focus:border-primary focus:ring-0 rounded-xl transition-all placeholder:text-outline-variant" placeholder="Минск" type="text"></div>
+<div class="space-y-1"><label class="font-label-md text-label-md text-secondary ml-1">Куда</label>
+<input class="w-full px-4 py-3 bg-white/50 border-transparent focus:border-primary focus:ring-0 rounded-xl transition-all placeholder:text-outline-variant" placeholder="Москва" type="text"></div>
+</div>
+<div class="space-y-1"><label class="font-label-md text-label-md text-secondary ml-1">Вес / Объем</label>
+<input class="w-full px-4 py-3 bg-white/50 border-transparent focus:border-primary focus:ring-0 rounded-xl transition-all placeholder:text-outline-variant" placeholder="20т / 82м³" type="text"></div>
+<div class="space-y-1"><label class="font-label-md text-label-md text-secondary ml-1">Телефон</label>
+<input class="w-full px-4 py-3 bg-white/50 border-transparent focus:border-primary focus:ring-0 rounded-xl transition-all placeholder:text-outline-variant" placeholder="+375 (__) ___-__-__" type="tel"></div>
+<button class="btn-premium w-full py-4 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-xl transition-all shadow-lg shadow-primary/20" onclick="window.location.href='contacts.html'">Получить расчет стоимости</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 bg-surface scroll-mt-20" id="priority-routes">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-8 space-y-2 reveal active"><h2 class="font-headline-lg text-headline-lg">Приоритетные направления</h2><div class="h-1.5 w-24 bg-primary rounded-full"></div></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<a class="glass-panel border border-surface-variant rounded-3xl p-8 shadow-sm cursor-pointer reveal hover-lift flex flex-col justify-between min-h-[200px] active transition-all group" href="rb.html">
+<div class="flex justify-between items-start">
+<div><span class="material-symbols-outlined text-primary mb-4 text-4xl">location_on</span><h3 class="font-headline-md text-headline-md mb-2">Перевозки по РБ</h3><p class="font-body-sm text-body-sm text-secondary">Локальная доставка между городами Беларуси. Ежедневные рейсы, страховая защита и прозрачные цепочки поставок.</p></div>
+<span class="material-symbols-outlined text-primary-container opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<div class="mt-4 text-primary font-bold text-label-md uppercase tracking-wider">Подробнее</div>
+</a>
+<a class="glass-panel border border-surface-variant rounded-3xl p-8 shadow-sm cursor-pointer reveal hover-lift flex flex-col justify-between min-h-[200px] active transition-all group" href="rb-rf.html">
+<div class="flex justify-between items-start">
+<div><span class="material-symbols-outlined text-primary mb-4 text-4xl">potted_plant</span><h3 class="font-headline-md text-headline-md mb-2">РБ — РФ (Ежедневно)</h3><p class="font-body-sm text-body-sm text-secondary">Регулярное сообщение между Минском, Москвой и Санкт-Петербургом. Доставка «от двери до двери» за 24 часа.</p></div>
+<span class="material-symbols-outlined text-primary-container opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<div class="mt-4 text-primary font-bold text-label-md uppercase tracking-wider">Подробнее</div>
+</a>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface scroll-mt-20" id="services-section">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-end mb-12 reveal">
+<div class="space-y-2"><h2 class="font-headline-lg text-headline-lg">Комплексные решения</h2><div class="h-1.5 w-24 bg-primary rounded-full"></div></div>
+<a class="hidden md:flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="services.html">ВСЕ УСЛУГИ <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 group relative overflow-hidden rounded-3xl bg-white border border-surface-variant p-8 flex flex-col justify-between min-h-[320px] shadow-sm hover:shadow-2xl transition-all cursor-pointer reveal hover-lift">
+<div class="relative z-10 max-w-sm">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">inventory_2</span>
+<h3 class="font-headline-md text-headline-md mb-4">Сборные грузы (LTL)</h3>
+<p class="font-body-md text-body-md text-secondary">Оптимизируйте затраты на логистику, оплачивая только занимаемое место в транспортном средстве. Регулярные рейсы между крупными хабами РБ и РФ.</p>
+</div>
+</div>
+<div class="group bg-inverse-surface text-surface-pure rounded-3xl p-8 flex flex-col justify-center items-center text-center shadow-sm hover:bg-black transition-all reveal hover-lift cursor-pointer">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">warning</span>
+<h3 class="font-headline-md text-headline-md mb-2 uppercase">Нестандартные грузы</h3>
+<p class="font-body-sm text-body-sm text-surface-variant mb-6">Перевозка опасных (ADR) и негабаритных грузов любой сложности.</p>
+<a href="oversized.html" class="px-6 py-2 border border-white/20 rounded-full font-label-md hover:bg-white hover:text-black transition-all">Подробнее</a>
+</div>
+<div class="glass-panel border border-surface-variant rounded-3xl p-8 shadow-sm cursor-pointer reveal hover-lift">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">gavel</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Таможенное оформление</h3>
+<p class="font-body-sm text-body-sm text-secondary">Полная поддержка при прохождении границ, оформление СТ-1 и фитосанитарных сертификатов.</p>
+</div>
+<div class="glass-panel border border-surface-variant rounded-3xl p-8 shadow-sm cursor-pointer reveal hover-lift">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">home_work</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Складское хранение</h3>
+<p class="font-body-sm text-body-sm text-secondary">Собственные СВХ в Минске и Подмосковье. Консолидация и ответственное хранение.</p>
+</div>
+<div class="glass-panel border border-surface-variant rounded-3xl p-8 shadow-sm cursor-pointer reveal hover-lift">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">shopping_cart_checkout</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Выкуп товара в ЕС</h3>
+<p class="font-body-sm text-body-sm text-secondary">Комплексный сервис по закупке и доставке товаров от европейских поставщиков.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface-muted scroll-mt-20" id="fleet-section">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-16 space-y-4 reveal">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Возможности нашего автопарка</h2>
+<div class="h-1.5 w-24 bg-primary rounded-full"></div>
+<div class="flex justify-end">
+<a class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all cursor-pointer" href="fleet.html">ПОДРОБНЕЕ <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<a href="fleet-refrij.html" class="glass-panel p-8 rounded-3xl group hover-lift transition-all duration-300 reveal cursor-pointer block">
+<div class="mb-6 inline-flex p-4 rounded-2xl bg-surface-container-low text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-[32px]">ac_unit</span></div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Рефрижератор</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-6">Соблюдение температурного режима -25°C ... +25°C.</p>
+<div class="pt-4 border-t border-glass flex items-center justify-between text-primary font-bold text-label-md"><span>СПЕЦРЕЖИМ</span><span class="material-symbols-outlined">arrow_forward</span></div>
+</a>
+<a href="fleet-eurotruck.html" class="glass-panel p-8 rounded-3xl group hover-lift transition-all duration-300 reveal cursor-pointer block">
+<div class="mb-6 inline-flex p-4 rounded-2xl bg-surface-container-low text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-[32px]">local_shipping</span></div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Еврофура</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-6">Тентованные полуприцепы 20 тонн, 82-92 м³.</p>
+<div class="pt-4 border-t border-glass flex items-center justify-between text-primary font-bold text-label-md"><span>ОСНОВНОЙ ПАРК</span><span class="material-symbols-outlined">arrow_forward</span></div>
+</a>
+<a href="fleet-light.html" class="glass-panel p-8 rounded-3xl group hover-lift transition-all duration-300 reveal cursor-pointer block">
+<div class="mb-6 inline-flex p-4 rounded-2xl bg-surface-container-low text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-[32px]">delivery_dining</span></div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Малотоннажный</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-6">Городская доставка и экспресс-рейсы до 3.5т.</p>
+<div class="pt-4 border-t border-glass flex items-center justify-between text-primary font-bold text-label-md"><span>ГОРОД</span><span class="material-symbols-outlined">arrow_forward</span></div>
+</a>
+<a href="oversized.html" class="glass-panel p-8 rounded-3xl group hover-lift transition-all duration-300 reveal cursor-pointer block">
+<div class="mb-6 inline-flex p-4 rounded-2xl bg-surface-container-low text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-[32px]">engineering</span></div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Спецтехника</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-6">Модульные тралы и ADR транспорт для сложных задач.</p>
+<div class="pt-4 border-t border-glass flex items-center justify-between text-primary font-bold text-label-md"><span>НЕГАБАРИТ</span><span class="material-symbols-outlined">arrow_forward</span></div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-16 px-gutter grid grid-cols-1 md:grid-cols-4 gap-12 bg-inverse-surface reveal">
+<div class="space-y-4">
+<span class="font-display-lg text-headline-md text-surface-pure cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">A2Group</span>
+<p class="font-body-sm text-body-sm text-surface-variant max-w-xs leading-relaxed">Профессиональные логистические решения для бизнеса любого масштаба. Скорость, надежность, прозрачность.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2 tracking-widest">Навигация</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="index.html">ГЛАВНАЯ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="services.html">УСЛУГИ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="fleet.html">АВТОПАРК</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="contacts.html">КОНТАКТЫ</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2 tracking-widest">Сервисы</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="tracking.html">ОНЛАЙН-ТРЕКИНГ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="sla.html">МЕТРИКИ SLA</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="express.html">ЭКСПРЕСС-ДОСТАВКА</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2 tracking-widest">Контакты</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="mailto:info@a2group.by">info@a2group.by</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+<span class="font-body-sm text-body-sm text-surface-variant mt-4 opacity-50">© 2024 A2Group. Все права защищены.</span>
+</div>
+</footer>
+<script>
+        function switchTab(type) {
+            const indicator = document.getElementById('tab-indicator');
+            const callBtn = document.getElementById('btn-call');
+            const calcBtn = document.getElementById('btn-calc');
+            const callContent = document.getElementById('tab-content-call');
+            const calcContent = document.getElementById('tab-content-calc');
+            if (type === 'call') {
+                indicator.style.left = '4px';
+                callBtn.classList.add('text-on-surface'); callBtn.classList.remove('text-secondary');
+                calcBtn.classList.add('text-secondary'); calcBtn.classList.remove('text-on-surface');
+                callContent.classList.remove('hidden'); calcContent.classList.add('hidden');
+            } else {
+                indicator.style.left = 'calc(50% + 0px)';
+                calcBtn.classList.add('text-on-surface'); calcBtn.classList.remove('text-secondary');
+                callBtn.classList.add('text-secondary'); callBtn.classList.remove('text-on-surface');
+                calcContent.classList.remove('hidden'); callContent.classList.add('hidden');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body></html>
