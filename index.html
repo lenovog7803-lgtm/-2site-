@@ -170,8 +170,22 @@ function toggleMobileMenu() {
 }
 </script>
 <main class="pt-20">
-<div style="background:linear-gradient(135deg,#e68926,#ff9f3d);padding:0.75rem 1.5rem;text-align:center;position:relative;z-index:40;">
-  <p style="color:white;font-weight:700;font-size:0.9rem;margin:0;">&#127881; АКЦИЯ: Скидка 10% на первый рейс для новых клиентов — <a href="contacts.html" style="color:white;text-decoration:underline;font-weight:800;">Оставить заявку &#8594;</a></p>
+<div style="background:rgba(255,255,255,0.15);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.3);overflow:hidden;position:relative;z-index:40;">
+  <div style="display:flex;animation:ticker 25s linear infinite;width:max-content;padding:0.85rem 0;" onmouseover="this.style.animationPlayState='paused'" onmouseout="this.style.animationPlayState='running'">
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">🎉 АКЦИЯ — Скидка 10% на первый рейс для новых клиентов</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">🚚 Ежедневные рейсы Минск — Москва — СПб</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">📦 Страхование груза 100% на каждом рейсе</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">⚡ Экспресс-доставка за 24 часа</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">💳 Отсрочка платежа для партнёров</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">📞 Поддержка 24/7 — +375 44 700-94-04</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">🎉 АКЦИЯ — Скидка 10% на первый рейс для новых клиентов</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">🚚 Ежедневные рейсы Минск — Москва — СПб</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">📦 Страхование груза 100% на каждом рейсе</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">⚡ Экспресс-доставка за 24 часа</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">💳 Отсрочка платежа для партнёров</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">📞 Поддержка 24/7 — +375 44 700-94-04</span>
+  </div>
+  <style>@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }</style>
 </div>
 <section class="relative min-h-[921px] flex items-center overflow-hidden hero-gradient" id="lead-form">
 <div class="absolute top-0 right-0 w-1/2 h-full z-0 pointer-events-none reveal active" style="border-left:4px solid #E68926;">
@@ -440,39 +454,61 @@ function toggleMobileMenu() {
 <div style="max-width:1440px;margin:0 auto;">
 <div style="text-align:center;margin-bottom:3rem;">
 <h2 style="font-size:2rem;font-weight:800;margin-bottom:0.5rem;">Партнёры и сертификаты</h2>
-<div style="width:6rem;height:4px;background:#e68926;border-radius:2px;margin:0 auto;"></div>
+<div style="width:6rem;height:4px;background:#e68926;border-radius:2px;margin:0 auto 1rem;"></div>
+<p style="color:#6b7280;max-width:600px;margin:0 auto;">Работаем с ведущими страховыми компаниями, банками и сертифицирующими органами</p>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;align-items:center;">
-  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
-    <div style="font-size:2.5rem;">&#128737;</div>
-    <div style="font-weight:700;font-size:0.9rem;text-align:center;">Белгосстрах</div>
-    <div style="color:#9ca3af;font-size:0.75rem;">Страхование грузов</div>
+<div style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;align-items:stretch;">
+
+  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Alfa-Bank_logo.svg/320px-Alfa-Bank_logo.svg.png" alt="Альфа-Банк" style="height:40px;object-fit:contain;filter:grayscale(20%);">
+    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Альфа-Банк</div>
+    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Банк-партнёр</div>
   </div>
-  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
-    <div style="font-size:2.5rem;">&#128203;</div>
-    <div style="font-weight:700;font-size:0.9rem;text-align:center;">ГТК РБ</div>
-    <div style="color:#9ca3af;font-size:0.75rem;">Таможенный брокер</div>
+
+  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Belarusbank_logo.svg/320px-Belarusbank_logo.svg.png" alt="Белгосстрах" style="height:40px;object-fit:contain;filter:grayscale(20%);" onerror="this.style.display='none'">
+    <div style="font-size:2rem;">🛡️</div>
+    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Белгосстрах</div>
+    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Страхование грузов</div>
   </div>
-  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
-    <div style="font-size:2.5rem;">&#127758;</div>
-    <div style="font-weight:700;font-size:0.9rem;text-align:center;">TIR Carnet</div>
-    <div style="color:#9ca3af;font-size:0.75rem;">Международные перевозки</div>
+
+  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/DHL_Logo.svg/320px-DHL_Logo.svg.png" alt="DHL" style="height:40px;object-fit:contain;">
+    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">DHL Express</div>
+    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Партнёр по экспрессу</div>
   </div>
-  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
-    <div style="font-size:2.5rem;">&#128196;</div>
-    <div style="font-weight:700;font-size:0.9rem;text-align:center;">CMR страхование</div>
-    <div style="color:#9ca3af;font-size:0.75rem;">Каждый рейс</div>
+
+  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Allianz_logo.svg/320px-Allianz_logo.svg.png" alt="Allianz" style="height:40px;object-fit:contain;">
+    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Allianz</div>
+    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Страхование CMR</div>
   </div>
-  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
-    <div style="font-size:2.5rem;">&#9888;</div>
-    <div style="font-weight:700;font-size:0.9rem;text-align:center;">ADR сертификат</div>
-    <div style="color:#9ca3af;font-size:0.75rem;">Опасные грузы</div>
+
+  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Scania_logo.svg/320px-Scania_logo.svg.png" alt="Scania" style="height:40px;object-fit:contain;">
+    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Scania</div>
+    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Техника автопарка</div>
   </div>
-  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
-    <div style="font-size:2.5rem;">&#127970;</div>
-    <div style="font-weight:700;font-size:0.9rem;text-align:center;">Альфа-Банк</div>
-    <div style="color:#9ca3af;font-size:0.75rem;">Банк-партнёр</div>
+
+  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Volvo-Trucks-logo.svg/320px-Volvo-Trucks-logo.svg.png" alt="Volvo" style="height:40px;object-fit:contain;" onerror="this.style.display='none'">
+    <div style="font-size:2rem;">🚛</div>
+    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Volvo Trucks</div>
+    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Техника автопарка</div>
   </div>
+
+  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
+    <div style="font-size:2rem;">📋</div>
+    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">TIR Carnet</div>
+    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Международные перевозки</div>
+  </div>
+
+  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
+    <div style="font-size:2rem;">⚠️</div>
+    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">ADR сертификат</div>
+    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Опасные грузы 1-9 класс</div>
+  </div>
+
 </div>
 </div>
 </section>
