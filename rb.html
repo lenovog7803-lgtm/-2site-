@@ -18,7 +18,25 @@
 <div class="flex items-center gap-4">
 <a class="hidden lg:block text-sm font-semibold text-gray-500" href="tel:+375447009404">+375 (44) 700-94-04</a>
 <a class="bg-orange-500 text-white text-sm font-semibold px-6 py-3 rounded-xl hover:bg-orange-400 transition-all" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
-</div></header>
+</div><button id="burger" onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-1.5 p-2 ml-2" style="cursor:pointer;background:none;border:none;">
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+</button>
+</header>
+<div id="mobile-menu" style="display:none;position:fixed;top:80px;left:0;right:0;background:white;padding:1.5rem;border-bottom:1px solid #e5e7eb;z-index:49;flex-direction:column;gap:0;box-shadow:0 8px 24px rgba(0,0,0,0.1);">
+  <a href="index.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">ГЛАВНАЯ</a>
+  <a href="services.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">УСЛУГИ</a>
+  <a href="fleet.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">АВТОПАРК</a>
+  <a href="contacts.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">КОНТАКТЫ</a>
+  <a href="contacts.html" style="background:#e68926;color:white;padding:1rem;border-radius:0.75rem;font-weight:700;text-decoration:none;text-align:center;display:block;margin-top:1rem;">ПОЛУЧИТЬ РАСЧЕТ</a>
+</div>
+<script>
+function toggleMobileMenu() {
+  var m = document.getElementById('mobile-menu');
+  m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
 <main class="pt-20">
 <section style="background:radial-gradient(circle at 80% 20%,rgba(230,137,38,0.08) 0%,transparent 50%);padding:6rem 1.5rem 4rem;">
 <div style="max-width:1200px;margin:0 auto;">
@@ -52,4 +70,33 @@
     <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"/></svg>
   </a>
 </div>
+<div id="exit-popup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99999;align-items:center;justify-content:center;">
+  <div style="background:white;border-radius:2rem;padding:3rem;max-width:480px;width:90%;text-align:center;position:relative;">
+    <button onclick="document.getElementById('exit-popup').style.display='none'" style="position:absolute;top:1rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#9ca3af;">&#10005;</button>
+    <div style="font-size:3rem;margin-bottom:1rem;">&#128666;</div>
+    <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:0.5rem;">Подождите!</h2>
+    <p style="color:#6b7280;margin-bottom:0.5rem;">Первый рейс со скидкой <strong style="color:#e68926;">10%</strong></p>
+    <p style="color:#6b7280;margin-bottom:2rem;font-size:0.9rem;">Оставьте номер — перезвоним за 5 минут и оформим заявку</p>
+    <input id="popup-phone" type="tel" placeholder="+375 (__) ___-__-__" style="width:100%;padding:1rem;border:2px solid #e5e7eb;border-radius:0.75rem;font-size:1rem;margin-bottom:1rem;outline:none;box-sizing:border-box;">
+    <button onclick="submitPopup()" style="width:100%;background:#e68926;color:white;padding:1rem;border:none;border-radius:0.75rem;font-size:1rem;font-weight:700;cursor:pointer;">ПЕРЕЗВОНИТЕ МНЕ</button>
+    <p style="color:#9ca3af;font-size:0.75rem;margin-top:1rem;">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+  </div>
+</div>
+<script>
+(function(){
+  var popupShown = false;
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY < 10 && !popupShown) {
+      popupShown = true;
+      document.getElementById('exit-popup').style.display = 'flex';
+    }
+  });
+  window.submitPopup = function() {
+    var phone = document.getElementById('popup-phone').value;
+    if (phone.length > 5) {
+      document.getElementById('exit-popup').innerHTML = '<div style="background:white;border-radius:2rem;padding:3rem;max-width:480px;width:90%;text-align:center;"><div style="font-size:3rem;margin-bottom:1rem;">&#9989;</div><h2 style="font-size:1.75rem;font-weight:800;margin-bottom:1rem;">Спасибо!</h2><p style="color:#6b7280;">Мы перезвоним вам в течение 5 минут</p><button onclick="document.getElementById('exit-popup').style.display='none'" style="margin-top:2rem;background:#e68926;color:white;padding:0.75rem 2rem;border:none;border-radius:0.75rem;cursor:pointer;font-weight:700;">Закрыть</button></div>';
+    }
+  };
+})();
+</script>
 </body></html>

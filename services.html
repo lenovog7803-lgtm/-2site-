@@ -1,36 +1,92 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
+<!DOCTYPE html><html class="light scroll-smooth" lang="ru" style="scroll-behavior: smooth;"><head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="description" content="Перевозки РБ и РФ, таможня, склад, выкуп в ЕС, LTL, экспресс">
 <title>Услуги A2Group — Грузоперевозки</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
-* { font-family: Inter, sans-serif; }
-.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-.glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.4); }
-.hover-lift { transition: all 0.3s ease; }
-.hover-lift:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(230,137,38,0.1); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(255,255,255,0.4); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.5); }
+        .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.4); }
+        .hover-lift { transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+        .hover-lift:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(230,137,38,0.1); }
+        .btn-premium { transition: all 0.3s cubic-bezier(0.4,0,0.2,1); }
+        .btn-premium:hover { box-shadow: 0 0 20px rgba(230,137,38,0.4); transform: scale(1.05); }
+        .btn-premium:active { transform: scale(0.95); }
 </style>
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: { extend: {
+        colors: {
+            "outline": "#877364", "secondary": "#5f5e5e", "inverse-on-surface": "#f0f1f2",
+            "surface-container": "#edeeef", "surface-pure": "#FFFFFF", "inverse-surface": "#2e3132",
+            "inverse-primary": "#ffb778", "surface-variant": "#e1e3e4", "surface-dim": "#d9dadb",
+            "on-error": "#ffffff", "surface-container-low": "#f3f4f5", "primary-container": "#E68926",
+            "on-tertiary-container": "#303743", "on-secondary": "#ffffff", "surface-tint": "#8e4e00",
+            "surface-muted": "#F8F9FA", "on-secondary-fixed": "#1c1b1b", "secondary-container": "#e2dfde",
+            "tertiary": "#585f6c", "primary-fixed-dim": "#ffb778", "status-success": "#10B981",
+            "surface": "#f8f9fa", "outline-variant": "#dac2b0", "surface-container-highest": "#e1e3e4",
+            "surface-container-high": "#e7e8e9", "border-glass": "rgba(255,255,255,0.4)",
+            "surface-container-lowest": "#ffffff", "on-background": "#191c1d", "on-primary": "#ffffff",
+            "on-surface-variant": "#544436", "surface-bright": "#f8f9fa", "primary": "#E68926",
+            "error": "#ba1a1a", "tertiary-container": "#99a0af", "primary-fixed": "#ffdcc1",
+            "on-primary-container": "#552c00", "background": "#f8f9fa", "on-primary-fixed": "#2e1500",
+            "on-surface": "#191c1d"
+        },
+        spacing: { "gutter": "24px", "container-max": "1440px", "margin-mobile": "16px", "unit": "4px", "margin-desktop": "40px" },
+        fontFamily: { "headline-md": ["Inter"], "body-md": ["Inter"], "display-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"] },
+        fontSize: {
+            "headline-md": ["24px",{"lineHeight":"32px","fontWeight":"800"}],
+            "body-md": ["16px",{"lineHeight":"24px","fontWeight":"400"}],
+            "display-lg": ["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"800"}],
+            "headline-lg-mobile": ["28px",{"lineHeight":"34px","fontWeight":"800"}],
+            "body-sm": ["14px",{"lineHeight":"20px","fontWeight":"400"}],
+            "headline-lg": ["32px",{"lineHeight":"40px","fontWeight":"800"}],
+            "headline-sm": ["18px",{"lineHeight":"24px","fontWeight":"800"}],
+            "label-lg": ["14px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],
+            "body-lg": ["18px",{"lineHeight":"28px","fontWeight":"400"}],
+            "label-md": ["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}]
+        }
+    }}
+}
+</script>
 </head>
 <body class="bg-gray-50 text-gray-900">
-<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-white/80 backdrop-blur-xl border-b border-white/30 shadow-sm" style="max-width:1440px;margin:0 auto;left:0;right:0;">
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-surface-pure/80 backdrop-blur-xl border-b border-glass shadow-sm" id="top">
 <div class="flex items-center gap-8">
-<a class="text-3xl font-extrabold" style="font-family:Inter,sans-serif;" href="index.html">A2Group</a>
+<a class="font-display-lg text-display-lg font-extrabold text-on-surface cursor-pointer" href="index.html">A2Group</a>
 <nav class="hidden md:flex items-center gap-6">
-<a class="text-sm font-semibold text-gray-500 hover:text-orange-500 transition-colors " href="index.html">ГЛАВНАЯ</a>
-<a class="text-sm font-semibold text-gray-500 hover:text-orange-500 transition-colors font-bold text-orange-500 border-b-2 border-orange-500 pb-1" href="services.html">УСЛУГИ</a>
-<a class="text-sm font-semibold text-gray-500 hover:text-orange-500 transition-colors " href="fleet.html">АВТОПАРК</a>
-<a class="text-sm font-semibold text-gray-500 hover:text-orange-500 transition-colors " href="contacts.html">КОНТАКТЫ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-all duration-200 cursor-pointer" href="index.html">ГЛАВНАЯ</a>
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary-container transition-all duration-200 cursor-pointer" href="services.html">УСЛУГИ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-all duration-200 cursor-pointer" href="fleet.html">АВТОПАРК</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-all duration-200 cursor-pointer" href="contacts.html">КОНТАКТЫ</a>
 </nav>
 </div>
-<div class="flex items-center gap-4">
-<a class="hidden lg:block text-sm font-semibold text-gray-500 hover:text-orange-500" href="tel:+375447009404">+375 (44) 700-94-04</a>
-<a class="bg-orange-500 text-white text-sm font-semibold px-6 py-3 rounded-xl hover:bg-orange-400 transition-all" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+<a class="btn-premium bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-xl shadow-lg shadow-primary/20 cursor-pointer" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
 </div>
+<button id="burger" onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-1.5 p-2 ml-2" style="cursor:pointer;background:none;border:none;">
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+</button>
 </header>
+<div id="mobile-menu" style="display:none;position:fixed;top:80px;left:0;right:0;background:white;padding:1.5rem;border-bottom:1px solid #e5e7eb;z-index:49;flex-direction:column;gap:0;box-shadow:0 8px 24px rgba(0,0,0,0.1);">
+  <a href="index.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">ГЛАВНАЯ</a>
+  <a href="services.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">УСЛУГИ</a>
+  <a href="fleet.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">АВТОПАРК</a>
+  <a href="contacts.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">КОНТАКТЫ</a>
+  <a href="contacts.html" style="background:#e68926;color:white;padding:1rem;border-radius:0.75rem;font-weight:700;text-decoration:none;text-align:center;display:block;margin-top:1rem;">ПОЛУЧИТЬ РАСЧЕТ</a>
+</div>
+<script>
+function toggleMobileMenu() {
+  var m = document.getElementById('mobile-menu');
+  m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
 <main class="pt-20">
 
 <section style="background:radial-gradient(circle at 80% 20%,rgba(230,137,38,0.08) 0%,transparent 50%);padding:6rem 1.5rem 3rem;">
@@ -132,5 +188,34 @@
     <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"/></svg>
   </a>
 </div>
+<div id="exit-popup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99999;align-items:center;justify-content:center;">
+  <div style="background:white;border-radius:2rem;padding:3rem;max-width:480px;width:90%;text-align:center;position:relative;">
+    <button onclick="document.getElementById('exit-popup').style.display='none'" style="position:absolute;top:1rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#9ca3af;">&#10005;</button>
+    <div style="font-size:3rem;margin-bottom:1rem;">&#128666;</div>
+    <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:0.5rem;">Подождите!</h2>
+    <p style="color:#6b7280;margin-bottom:0.5rem;">Первый рейс со скидкой <strong style="color:#e68926;">10%</strong></p>
+    <p style="color:#6b7280;margin-bottom:2rem;font-size:0.9rem;">Оставьте номер — перезвоним за 5 минут и оформим заявку</p>
+    <input id="popup-phone" type="tel" placeholder="+375 (__) ___-__-__" style="width:100%;padding:1rem;border:2px solid #e5e7eb;border-radius:0.75rem;font-size:1rem;margin-bottom:1rem;outline:none;box-sizing:border-box;">
+    <button onclick="submitPopup()" style="width:100%;background:#e68926;color:white;padding:1rem;border:none;border-radius:0.75rem;font-size:1rem;font-weight:700;cursor:pointer;">ПЕРЕЗВОНИТЕ МНЕ</button>
+    <p style="color:#9ca3af;font-size:0.75rem;margin-top:1rem;">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+  </div>
+</div>
+<script>
+(function(){
+  var popupShown = false;
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY < 10 && !popupShown) {
+      popupShown = true;
+      document.getElementById('exit-popup').style.display = 'flex';
+    }
+  });
+  window.submitPopup = function() {
+    var phone = document.getElementById('popup-phone').value;
+    if (phone.length > 5) {
+      document.getElementById('exit-popup').innerHTML = '<div style="background:white;border-radius:2rem;padding:3rem;max-width:480px;width:90%;text-align:center;"><div style="font-size:3rem;margin-bottom:1rem;">&#9989;</div><h2 style="font-size:1.75rem;font-weight:800;margin-bottom:1rem;">Спасибо!</h2><p style="color:#6b7280;">Мы перезвоним вам в течение 5 минут</p><button onclick="document.getElementById('exit-popup').style.display='none'" style="margin-top:2rem;background:#e68926;color:white;padding:0.75rem 2rem;border:none;border-radius:0.75rem;cursor:pointer;font-weight:700;">Закрыть</button></div>';
+    }
+  };
+})();
+</script>
 </body>
 </html>

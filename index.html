@@ -150,11 +150,37 @@
 <a class="hidden lg:block font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
 <a class="btn-premium bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-xl shadow-lg shadow-primary/20 cursor-pointer" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
 </div>
+<button id="burger" onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-1.5 p-2 ml-2" style="cursor:pointer;background:none;border:none;">
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+</button>
 </header>
+<div id="mobile-menu" style="display:none;position:fixed;top:80px;left:0;right:0;background:white;padding:1.5rem;border-bottom:1px solid #e5e7eb;z-index:49;flex-direction:column;gap:0;box-shadow:0 8px 24px rgba(0,0,0,0.1);">
+  <a href="index.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">ГЛАВНАЯ</a>
+  <a href="services.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">УСЛУГИ</a>
+  <a href="fleet.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">АВТОПАРК</a>
+  <a href="contacts.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">КОНТАКТЫ</a>
+  <a href="contacts.html" style="background:#e68926;color:white;padding:1rem;border-radius:0.75rem;font-weight:700;text-decoration:none;text-align:center;display:block;margin-top:1rem;">ПОЛУЧИТЬ РАСЧЕТ</a>
+</div>
+<script>
+function toggleMobileMenu() {
+  var m = document.getElementById('mobile-menu');
+  m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
 <main class="pt-20">
+<div style="background:linear-gradient(135deg,#e68926,#ff9f3d);padding:0.75rem 1.5rem;text-align:center;position:relative;z-index:40;">
+  <p style="color:white;font-weight:700;font-size:0.9rem;margin:0;">&#127881; АКЦИЯ: Скидка 10% на первый рейс для новых клиентов — <a href="contacts.html" style="color:white;text-decoration:underline;font-weight:800;">Оставить заявку &#8594;</a></p>
+</div>
 <section class="relative min-h-[921px] flex items-center overflow-hidden hero-gradient" id="lead-form">
-<div class="absolute top-0 right-0 w-1/2 h-full z-0 opacity-20 pointer-events-none reveal active">
-<img alt="Logistics background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsyxG2gjQr4B_2H1qd94Da3DadC9xCBXuR05p9ge_0OgdFvdekGT0UKgon8G1Eo3-gxbUw7eSidQ-PmowE2LtsIOt2J2M_xwIcZuAFFqr0BM3pTz2PFfi9_Uwl6ajh32H-7MRLR8kXtrFJf6F-wv_kcNT0l0hsxJbJwUiepS2X77smUYRP2kBeCoOBD8-MLZ6hpIPUv7zXyiVFJeVuWu3cJrrHIa37tLPRKeJDxzlVcsPvDh7eRg58msbm3QmvoIJcq59ph9ykP9WO">
+<div class="absolute top-0 right-0 w-1/2 h-full z-0 pointer-events-none reveal active" style="border-left:4px solid #E68926;">
+<img alt="Logistics background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsyxG2gjQr4B_2H1qd94Da3DadC9xCBXuR05p9ge_0OgdFvdekGT0UKgon8G1Eo3-gxbUw7eSidQ-PmowE2LtsIOt2J2M_xwIcZuAFFqr0BM3pTz2PFfi9_Uwl6ajh32H-7MRLR8kXtrFJf6F-wv_kcNT0l0hsxJbJwUiepS2X77smUYRP2kBeCoOBD8-MLZ6hpIPUv7zXyiVFJeVuWu3cJrrHIa37tLPRKeJDxzlVcsPvDh7eRg58msbm3QmvoIJcq59ph9ykP9WO" style="filter:blur(1px) brightness(0.85);opacity:0.35;">
+<div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(248,249,250,0.95) 0%,rgba(248,249,250,0.3) 60%,transparent 100%);"></div>
+<div style="position:absolute;bottom:2rem;right:1.5rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-radius:1rem;padding:0.75rem 1.25rem;display:flex;align-items:center;gap:0.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+  <span style="width:8px;height:8px;background:#10B981;border-radius:50%;display:inline-block;box-shadow:0 0 0 3px rgba(16,185,129,0.25);"></span>
+  <span style="font-size:0.85rem;font-weight:700;color:#191c1d;">8 машин в пути сейчас</span>
+</div>
 </div>
 <div class="max-w-container-max mx-auto px-gutter w-full grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 py-16">
 <div class="flex flex-col justify-center space-y-8 reveal active">
@@ -410,6 +436,46 @@
 @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 </style>
 </section>
+<section id="partners" style="background:#f8f9fa;padding:5rem 1.5rem;">
+<div style="max-width:1440px;margin:0 auto;">
+<div style="text-align:center;margin-bottom:3rem;">
+<h2 style="font-size:2rem;font-weight:800;margin-bottom:0.5rem;">Партнёры и сертификаты</h2>
+<div style="width:6rem;height:4px;background:#e68926;border-radius:2px;margin:0 auto;"></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;align-items:center;">
+  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
+    <div style="font-size:2.5rem;">&#128737;</div>
+    <div style="font-weight:700;font-size:0.9rem;text-align:center;">Белгосстрах</div>
+    <div style="color:#9ca3af;font-size:0.75rem;">Страхование грузов</div>
+  </div>
+  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
+    <div style="font-size:2.5rem;">&#128203;</div>
+    <div style="font-weight:700;font-size:0.9rem;text-align:center;">ГТК РБ</div>
+    <div style="color:#9ca3af;font-size:0.75rem;">Таможенный брокер</div>
+  </div>
+  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
+    <div style="font-size:2.5rem;">&#127758;</div>
+    <div style="font-weight:700;font-size:0.9rem;text-align:center;">TIR Carnet</div>
+    <div style="color:#9ca3af;font-size:0.75rem;">Международные перевозки</div>
+  </div>
+  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
+    <div style="font-size:2.5rem;">&#128196;</div>
+    <div style="font-weight:700;font-size:0.9rem;text-align:center;">CMR страхование</div>
+    <div style="color:#9ca3af;font-size:0.75rem;">Каждый рейс</div>
+  </div>
+  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
+    <div style="font-size:2.5rem;">&#9888;</div>
+    <div style="font-weight:700;font-size:0.9rem;text-align:center;">ADR сертификат</div>
+    <div style="color:#9ca3af;font-size:0.75rem;">Опасные грузы</div>
+  </div>
+  <div style="background:white;border-radius:1rem;padding:1.5rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:0.5rem;min-width:160px;">
+    <div style="font-size:2.5rem;">&#127970;</div>
+    <div style="font-weight:700;font-size:0.9rem;text-align:center;">Альфа-Банк</div>
+    <div style="color:#9ca3af;font-size:0.75rem;">Банк-партнёр</div>
+  </div>
+</div>
+</div>
+</section>
 <section class="py-24 bg-surface-muted scroll-mt-20" id="fleet-section">
 <div class="max-w-container-max mx-auto px-gutter">
 <div class="mb-16 space-y-4 reveal">
@@ -460,6 +526,7 @@
 <a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="services.html">УСЛУГИ</a>
 <a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="fleet.html">АВТОПАРК</a>
 <a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="contacts.html">КОНТАКТЫ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors cursor-pointer" href="#partners">ПАРТНЁРЫ</a>
 </div>
 <div class="flex flex-col gap-3">
 <span class="font-label-md text-label-md text-primary-fixed uppercase mb-2 tracking-widest">Сервисы</span>
@@ -511,4 +578,33 @@
     <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"/></svg>
   </a>
 </div>
+<div id="exit-popup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99999;align-items:center;justify-content:center;">
+  <div style="background:white;border-radius:2rem;padding:3rem;max-width:480px;width:90%;text-align:center;position:relative;">
+    <button onclick="document.getElementById('exit-popup').style.display='none'" style="position:absolute;top:1rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#9ca3af;">&#10005;</button>
+    <div style="font-size:3rem;margin-bottom:1rem;">&#128666;</div>
+    <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:0.5rem;">Подождите!</h2>
+    <p style="color:#6b7280;margin-bottom:0.5rem;">Первый рейс со скидкой <strong style="color:#e68926;">10%</strong></p>
+    <p style="color:#6b7280;margin-bottom:2rem;font-size:0.9rem;">Оставьте номер — перезвоним за 5 минут и оформим заявку</p>
+    <input id="popup-phone" type="tel" placeholder="+375 (__) ___-__-__" style="width:100%;padding:1rem;border:2px solid #e5e7eb;border-radius:0.75rem;font-size:1rem;margin-bottom:1rem;outline:none;box-sizing:border-box;">
+    <button onclick="submitPopup()" style="width:100%;background:#e68926;color:white;padding:1rem;border:none;border-radius:0.75rem;font-size:1rem;font-weight:700;cursor:pointer;">ПЕРЕЗВОНИТЕ МНЕ</button>
+    <p style="color:#9ca3af;font-size:0.75rem;margin-top:1rem;">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+  </div>
+</div>
+<script>
+(function(){
+  var popupShown = false;
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY < 10 && !popupShown) {
+      popupShown = true;
+      document.getElementById('exit-popup').style.display = 'flex';
+    }
+  });
+  window.submitPopup = function() {
+    var phone = document.getElementById('popup-phone').value;
+    if (phone.length > 5) {
+      document.getElementById('exit-popup').innerHTML = '<div style="background:white;border-radius:2rem;padding:3rem;max-width:480px;width:90%;text-align:center;"><div style="font-size:3rem;margin-bottom:1rem;">&#9989;</div><h2 style="font-size:1.75rem;font-weight:800;margin-bottom:1rem;">Спасибо!</h2><p style="color:#6b7280;">Мы перезвоним вам в течение 5 минут</p><button onclick="document.getElementById('exit-popup').style.display='none'" style="margin-top:2rem;background:#e68926;color:white;padding:0.75rem 2rem;border:none;border-radius:0.75rem;cursor:pointer;font-weight:700;">Закрыть</button></div>';
+    }
+  };
+})();
+</script>
 </body></html>
