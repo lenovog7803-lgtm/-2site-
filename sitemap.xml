@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://a2group.by/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://a2group.by/services.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/contacts.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/rb.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/rb-rf.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/customs.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/warehouse.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/eu-purchase.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/oversized.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/ltl.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/express.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/fleet.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/fleet-refrij.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/fleet-eurotruck.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/fleet-light.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/fleet-adr.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/sla.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://a2group.by/tracking.html</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+</urlset>
