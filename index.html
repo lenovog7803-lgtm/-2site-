@@ -160,6 +160,16 @@
 body { opacity: 0; animation: fadeIn 0.4s ease 0.1s forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
 </style>
+<style>
+@media (max-width: 768px) {
+  .hero-gradient { min-height: auto !important; padding: 2rem 1rem !important; }
+  h1.text-display-lg { font-size: 2rem !important; line-height: 2.5rem !important; }
+  .glass-panel.p-8 { padding: 1.5rem !important; }
+  .grid.grid-cols-1 { gap: 1.5rem !important; }
+  nav.hidden { display: none !important; }
+  .max-w-container-max { padding-left: 1rem !important; padding-right: 1rem !important; }
+}
+</style>
 </head>
 <body class="bg-surface-pure font-body-md text-on-surface selection:bg-primary-fixed antialiased">
 <div id="preloader" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#191c1d;z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;">
@@ -259,19 +269,19 @@ function toggleMobileMenu() {
   <style>@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }</style>
 </div>
 <section class="relative min-h-[921px] flex items-center overflow-hidden hero-gradient" id="lead-form">
-<div class="absolute top-0 right-0 w-1/2 h-full z-0 pointer-events-none reveal active" style="border-left:4px solid #E68926;">
-<img alt="Logistics background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsyxG2gjQr4B_2H1qd94Da3DadC9xCBXuR05p9ge_0OgdFvdekGT0UKgon8G1Eo3-gxbUw7eSidQ-PmowE2LtsIOt2J2M_xwIcZuAFFqr0BM3pTz2PFfi9_Uwl6ajh32H-7MRLR8kXtrFJf6F-wv_kcNT0l0hsxJbJwUiepS2X77smUYRP2kBeCoOBD8-MLZ6hpIPUv7zXyiVFJeVuWu3cJrrHIa37tLPRKeJDxzlVcsPvDh7eRg58msbm3QmvoIJcq59ph9ykP9WO" style="filter:blur(1px) brightness(0.85);opacity:0.35;">
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+<img alt="Logistics background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsyxG2gjQr4B_2H1qd94Da3DadC9xCBXuR05p9ge_0OgdFvdekGT0UKgon8G1Eo3-gxbUw7eSidQ-PmowE2LtsIOt2J2M_xwIcZuAFFqr0BM3pTz2PFfi9_Uwl6ajh32H-7MRLR8kXtrFJf6F-wv_kcNT0l0hsxJbJwUiepS2X77smUYRP2kBeCoOBD8-MLZ6hpIPUv7zXyiVFJeVuWu3cJrrHIa37tLPRKeJDxzlVcsPvDh7eRg58msbm3QmvoIJcq59ph9ykP9WO" style="width:100%;height:100%;object-fit:cover;object-position:center;">
 <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(248,249,250,0.95) 0%,rgba(248,249,250,0.3) 60%,transparent 100%);"></div>
 <div style="position:absolute;bottom:2rem;right:1.5rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-radius:1rem;padding:0.75rem 1.25rem;display:flex;align-items:center;gap:0.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
   <span style="width:8px;height:8px;background:#10B981;border-radius:50%;display:inline-block;box-shadow:0 0 0 3px rgba(16,185,129,0.25);"></span>
   <span style="font-size:0.85rem;font-weight:700;color:#191c1d;">8 машин в пути сейчас</span>
 </div>
 </div>
-<div class="max-w-container-max mx-auto px-gutter w-full grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 py-16">
+<div class="max-w-container-max mx-auto px-4 md:px-gutter w-full grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 py-8 md:py-16">
 <div class="flex flex-col justify-center space-y-8 reveal active">
 <div class="space-y-4">
 <span class="inline-block py-1 px-3 bg-primary/10 text-primary font-label-md text-label-md rounded uppercase tracking-wider animate-hero-fade-in" style="animation-delay: 0.1s;">Грузоперевозки 2024</span>
-<h1 class="font-display-lg text-display-lg leading-tight text-on-surface animate-hero-fade-in" style="animation-delay: 0.2s;">
+<h1 class="text-3xl md:text-5xl lg:text-display-lg font-extrabold leading-tight text-on-surface animate-hero-fade-in" style="animation-delay: 0.2s;">
 МЕЖДУНАРОДНАЯ ЛОГИСТИКА <span class="text-primary">РБ ↔ РФ</span>
 </h1>
 <p class="font-body-lg text-body-lg text-secondary max-w-xl animate-hero-fade-in" style="animation-delay: 0.4s;">
@@ -298,7 +308,7 @@ function toggleMobileMenu() {
 </div>
 </div>
 <div class="flex items-center justify-center lg:justify-end reveal active">
-<div class="w-full max-w-md glass-panel p-8 rounded-[2rem] shadow-2xl border border-white/60 animate-hero-fade-in" style="animation-delay: 0.8s;">
+<div class="w-full max-w-md glass-panel p-8 rounded-[2rem] shadow-2xl border border-white/60 animate-hero-fade-in" style="animation-delay: 0.8s;width:100%;max-width:100%;">
 <div class="relative flex p-1 bg-surface-muted rounded-full mb-8">
 <div class="absolute h-[calc(100%-8px)] w-[calc(50%-4px)] bg-white shadow-md rounded-full active-tab-indicator left-1 top-1" id="tab-indicator"></div>
 <button class="relative z-10 flex-1 py-3 font-label-lg text-label-lg text-on-surface transition-colors" id="btn-call" onclick="switchTab('call')">Быстрый звонок</button>
