@@ -629,6 +629,16 @@ function toggleMobileMenu() {
   </div>
 </div>
 <script>
+async function sendToTelegram(data) {
+  const token = '8889299523:AAGCDvfuPsI042hnKcs83-IR3LQydhbPQoQ';
+  const chatId = '558556324';
+  const text = `📦 Новая заявка с сайта a2group.by!\n\n👤 Имя: ${data.name || 'не указано'}\n📞 Телефон: ${data.phone || 'не указано'}\n💬 Сообщение: ${data.message || 'не указано'}\n📍 Страница: ${window.location.pathname}\n🕐 Время: ${new Date().toLocaleString('ru-RU')}`;
+  await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chatId, text: text, parse_mode: 'HTML' })
+  });
+}
 (function(){
   var popupShown = false;
   document.addEventListener('mouseleave', function(e) {
@@ -637,10 +647,11 @@ function toggleMobileMenu() {
       document.getElementById('exit-popup').style.display = 'flex';
     }
   });
-  window.submitPopup = function() {
+  window.submitPopup = async function() {
     var phone = document.getElementById('popup-phone').value;
     if (phone.length > 5) {
-      document.getElementById('exit-popup').innerHTML = '<div style="background:white;border-radius:2rem;padding:3rem;max-width:480px;width:90%;text-align:center;"><div style="font-size:3rem;margin-bottom:1rem;">&#9989;</div><h2 style="font-size:1.75rem;font-weight:800;margin-bottom:1rem;">Спасибо!</h2><p style="color:#6b7280;">Мы перезвоним вам в течение 5 минут</p><button onclick="document.getElementById('exit-popup').style.display='none'" style="margin-top:2rem;background:#e68926;color:white;padding:0.75rem 2rem;border:none;border-radius:0.75rem;cursor:pointer;font-weight:700;">Закрыть</button></div>';
+      await sendToTelegram({ name: 'Popup заявка', phone: phone, message: 'Заявка из popup при уходе со страницы' });
+      document.getElementById('exit-popup').innerHTML = '<div style="background:white;border-radius:2rem;padding:3rem;max-width:480px;width:90%;text-align:center;"><div style="font-size:3rem;margin-bottom:1rem;">✅</div><h2 style="font-size:1.75rem;font-weight:800;margin-bottom:1rem;">Спасибо!</h2><p style="color:#6b7280;">Мы перезвоним вам в течение 5 минут</p><button onclick="document.getElementById(\'exit-popup\').style.display=\'none\'" style="margin-top:2rem;background:#e68926;color:white;padding:0.75rem 2rem;border:none;border-radius:0.75rem;cursor:pointer;font-weight:700;">Закрыть</button></div>';
     }
   };
 })();
