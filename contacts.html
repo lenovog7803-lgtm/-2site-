@@ -68,6 +68,81 @@
 body { opacity: 0; animation: fadeIn 0.4s ease 0.1s forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
 </style>
+<style>
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
+@media (max-width: 768px) {
+
+  /* Шапка */
+  header, nav { padding-left: 1rem !important; padding-right: 1rem !important; }
+  header .hidden { display: none !important; }
+
+  /* Контейнеры */
+  .max-w-container-max { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .px-gutter { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .px-margin-desktop { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+  /* Заголовки */
+  h1, .text-display-lg { font-size: 2rem !important; line-height: 2.4rem !important; }
+  h2, .text-headline-lg { font-size: 1.5rem !important; line-height: 2rem !important; }
+  h3, .text-headline-md { font-size: 1.2rem !important; line-height: 1.6rem !important; }
+
+  /* Сетки */
+  .grid { grid-template-columns: 1fr !important; }
+  .md\:grid-cols-2, .md\:grid-cols-3, .md\:grid-cols-4,
+  .lg\:grid-cols-2, .lg\:grid-cols-3, .lg\:grid-cols-4 { grid-template-columns: 1fr !important; }
+  .md\:col-span-2, .md\:col-span-3, .md\:col-span-4,
+  .md\:col-span-5, .md\:col-span-6, .md\:col-span-7,
+  .md\:col-span-8, .md\:col-span-9, .md\:col-span-10,
+  .md\:col-span-12 { grid-column: span 1 !important; }
+
+  /* Флекс */
+  .flex { flex-wrap: wrap !important; }
+  .lg\:flex-row { flex-direction: column !important; }
+
+  /* Отступы */
+  .py-24 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .py-16 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .p-12, .p-10 { padding: 1.5rem !important; }
+  .p-8 { padding: 1.25rem !important; }
+  .gap-12 { gap: 1.5rem !important; }
+  .gap-16 { gap: 2rem !important; }
+
+  /* Картинки */
+  img { max-width: 100% !important; height: auto !important; }
+
+  /* Hero секция */
+  .min-h-\[921px\], .min-h-\[819px\] { min-height: auto !important; padding-top: 2rem !important; padding-bottom: 2rem !important; }
+
+  /* Кнопки */
+  .btn-premium, button, a[class*="px-"] { font-size: 0.85rem !important; padding: 0.75rem 1.25rem !important; }
+
+  /* Карточки */
+  .glass-panel, .glass-card { padding: 1.25rem !important; }
+  .rounded-3xl { border-radius: 1rem !important; }
+
+  /* Скрыть декоративные элементы */
+  .lg\:block { display: none !important; }
+  .hidden.lg\:flex { display: none !important; }
+
+  /* Форма */
+  input, textarea, select { font-size: 16px !important; }
+
+  /* Футер */
+  footer { grid-template-columns: 1fr !important; padding: 2rem 1rem !important; }
+
+  /* Бегущие строки */
+  .overflow-hidden { overflow: hidden !important; }
+
+  /* Таблицы */
+  table { display: block !important; overflow-x: auto !important; }
+}
+
+@media (max-width: 480px) {
+  h1, .text-display-lg { font-size: 1.75rem !important; line-height: 2.2rem !important; }
+  .p-8 { padding: 1rem !important; }
+  .py-24 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+}
+</style>
 </head>
 <body class="bg-surface-pure font-body-md text-on-surface selection:bg-primary-fixed">  <div style="width:0;height:3px;background:linear-gradient(90deg,#e68926,#ff9f3d);border-radius:2px;margin-top:1rem;animation:line 1.2s ease 0.6s forwards;"></div>
 </div>
