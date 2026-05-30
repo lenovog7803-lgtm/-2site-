@@ -70,6 +70,15 @@ body { opacity: 0; animation: fadeIn 0.4s ease 0.1s forwards; }
 </style>
 <style>
 @media (max-width: 768px) {
+  .md\:col-span-7 iframe,
+  .md\:col-span-7 img,
+  .md\:col-span-7 > div { display: none !important; }
+  .md\:col-span-7 { display: none !important; }
+  .md\:col-span-5 { grid-column: span 1 !important; width: 100% !important; }
+}
+</style>
+<style>
+@media (max-width: 768px) {
   header {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
