@@ -177,6 +177,12 @@ body { opacity: 0; animation: fadeIn 0.4s ease 0.1s forwards; }
   /* Шапка */
   header, nav { padding-left: 1rem !important; padding-right: 1rem !important; }
   header .hidden { display: none !important; }
+  header a.font-display-lg, header .text-display-lg { font-size: 1.5rem !important; }
+  header img[alt="A2Group"] { height: 28px !important; }
+  header a[href="contacts.html"].bg-primary-container,
+  header a[href="contacts.html"].bg-primary { display: none !important; }
+  header a[href^="tel"] { display: none !important; }
+  header { height: 64px !important; }
 
   /* Контейнеры */
   .max-w-container-max { padding-left: 1rem !important; padding-right: 1rem !important; }
@@ -355,7 +361,7 @@ function toggleMobileMenu() {
 <div class="max-w-container-max mx-auto px-4 md:px-gutter w-full grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 py-8 md:py-16">
 <div class="flex flex-col justify-center space-y-8 reveal active">
 <div class="space-y-4">
-<span class="inline-block py-1 px-3 bg-primary/10 text-primary font-label-md text-label-md rounded uppercase tracking-wider animate-hero-fade-in" style="animation-delay: 0.1s;">Грузоперевозки 2024</span>
+<span class="inline-block py-1 px-3 bg-primary/10 text-primary font-label-md text-label-md rounded uppercase tracking-wider animate-hero-fade-in" style="animation-delay: 0.1s;">Международная логистика · РБ и РФ</span>
 <h1 class="text-3xl md:text-5xl lg:text-display-lg font-extrabold leading-tight text-on-surface animate-hero-fade-in" style="animation-delay: 0.2s;">
 МЕЖДУНАРОДНАЯ ЛОГИСТИКА <span class="text-primary">РБ ↔ РФ</span>
 </h1>
