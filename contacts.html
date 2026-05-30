@@ -87,6 +87,14 @@
 <script>
 window.addEventListener('load', function() {
   const p = document.getElementById('preloader');
+  // Показываем только если зашли напрямую или обновили страницу
+  const isReload = performance.navigation.type === 1 || 
+                   !sessionStorage.getItem('visited');
+  if (!isReload) {
+    p.style.display = 'none';
+    return;
+  }
+  sessionStorage.setItem('visited', 'true');
   setTimeout(function() {
     p.style.opacity = '0';
     setTimeout(function() { p.style.display = 'none'; }, 600);
