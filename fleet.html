@@ -138,6 +138,8 @@ function toggleMobileMenu() {
 <a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="mailto:info@a2group.by">info@a2group.by</a>
 <a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a></div>
 <div class="flex flex-col gap-3"><span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Информация</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="privacy.html">Политика конфиденциальности</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="cookies.html">Политика Cookie</a>
 <span class="font-body-sm text-body-sm text-surface-variant mt-4 opacity-50">© 2024 A2Group. Все права защищены.</span></div>
 </footer>
 
@@ -177,5 +179,28 @@ function toggleMobileMenu() {
     }
   };
 })();
+</script>
+
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(25,28,29,0.97);backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,0.1);padding:1.25rem 1.5rem;z-index:99998;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+  <p style="color:#e5e7eb;font-size:0.875rem;margin:0;max-width:700px;">
+    🍪 Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с нашей
+    <a href="cookies.html" style="color:#e68926;text-decoration:underline;">политикой использования cookies</a> и
+    <a href="privacy.html" style="color:#e68926;text-decoration:underline;">политикой конфиденциальности</a>.
+  </p>
+  <div style="display:flex;gap:0.75rem;flex-shrink:0;">
+    <a href="cookies.html" style="color:#9ca3af;font-size:0.8rem;text-decoration:none;padding:0.6rem 1rem;border:1px solid rgba(255,255,255,0.2);border-radius:0.5rem;white-space:nowrap;">Подробнее</a>
+    <button onclick="acceptCookies()" style="background:#e68926;color:white;border:none;padding:0.6rem 1.5rem;border-radius:0.5rem;font-weight:700;font-size:0.875rem;cursor:pointer;white-space:nowrap;">Принять</button>
+  </div>
+</div>
+<script>
+function acceptCookies() {
+  localStorage.setItem('cookies_accepted', 'true');
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+window.addEventListener('load', function() {
+  if (!localStorage.getItem('cookies_accepted')) {
+    document.getElementById('cookie-banner').style.display = 'flex';
+  }
+});
 </script>
 </body></html>

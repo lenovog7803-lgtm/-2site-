@@ -1,0 +1,238 @@
+<!DOCTYPE html><html class="light scroll-smooth" lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Политика использования Cookie — A2Group</title>
+<meta name="description" content="Политика использования файлов cookie на сайте A2Group. Что такое cookies, какие используем и как их отключить.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(255,255,255,0.4); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.5); }
+        .hero-gradient { background: radial-gradient(circle at 80% 20%, rgba(230,137,38,0.08) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(230,137,38,0.05) 0%, transparent 40%); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .policy-section h2 { font-size: 1.25rem; font-weight: 700; color: #191c1d; margin-bottom: 0.75rem; margin-top: 2rem; }
+        .policy-section p, .policy-section li { font-size: 1rem; line-height: 1.75; color: #5f5e5e; margin-bottom: 0.5rem; }
+        .policy-section ul { padding-left: 1.5rem; list-style: disc; }
+        .policy-section a { color: #e68926; text-decoration: underline; }
+        .cookie-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .cookie-table th { background: #2e3132; color: white; padding: 0.75rem 1rem; text-align: left; font-size: 0.875rem; font-weight: 600; }
+        .cookie-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #e1e3e4; font-size: 0.875rem; color: #5f5e5e; vertical-align: top; }
+        .cookie-table tr:hover td { background: #f3f4f5; }
+        .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600; }
+        .badge-required { background: #dcfce7; color: #166534; }
+        .badge-analytics { background: #fef9c3; color: #854d0e; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{
+            "outline":"#877364","secondary":"#5f5e5e","inverse-on-surface":"#f0f1f2",
+            "surface-container":"#edeeef","surface-pure":"#FFFFFF","primary-container":"#e68926",
+            "inverse-surface":"#2e3132","surface-variant":"#e1e3e4","surface-dim":"#d9dadb",
+            "surface-container-low":"#f3f4f5","on-tertiary-container":"#303743","on-secondary":"#ffffff",
+            "surface-tint":"#8e4e00","surface-muted":"#F8F9FA","on-secondary-fixed":"#1c1b1b",
+            "secondary-container":"#e2dfde","industrial-orange-glare":"#FF9F3D","tertiary":"#585f6c",
+            "primary-fixed-dim":"#ffb778","status-success":"#10B981","surface":"#f8f9fa",
+            "outline-variant":"#dac2b0","surface-container-highest":"#e1e3e4","tertiary-fixed":"#dce2f3",
+            "surface-container-high":"#e7e8e9","border-glass":"rgba(255,255,255,0.4)",
+            "surface-container-lowest":"#ffffff","on-background":"#191c1d","on-primary":"#ffffff",
+            "on-surface-variant":"#544436","surface-bright":"#f8f9fa","primary":"#8e4e00",
+            "error":"#ba1a1a","tertiary-container":"#99a0af","primary-fixed":"#ffdcc1",
+            "on-primary-container":"#552c00","background":"#f8f9fa","on-primary-fixed":"#2e1500","on-surface":"#191c1d"
+        }, spacing:{"gutter":"24px","container-max":"1440px","margin-mobile":"16px","unit":"4px","margin-desktop":"40px"},
+        fontFamily:{"headline-md":["Inter"],"body-md":["Inter"],"display-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"label-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"]},
+        fontSize:{
+            "headline-md":["24px",{"lineHeight":"32px","fontWeight":"700"}],
+            "body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],
+            "display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"800"}],
+            "headline-lg-mobile":["28px",{"lineHeight":"34px","fontWeight":"700"}],
+            "body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],
+            "headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],
+            "headline-sm":["18px",{"lineHeight":"24px","fontWeight":"700"}],
+            "label-lg":["14px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],
+            "body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],
+            "label-md":["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}]
+        }}}}
+    </script>
+</head>
+<body class="bg-surface-pure font-body-md text-on-surface selection:bg-primary-fixed">
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-surface-pure/70 backdrop-blur-xl border-b border-glass shadow-sm">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-display-lg font-extrabold text-on-surface cursor-pointer" href="index.html">A2Group</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200 cursor-pointer" href="index.html">ГЛАВНАЯ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200 cursor-pointer" href="services.html">УСЛУГИ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200 cursor-pointer" href="contacts.html">КОНТАКТЫ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200 cursor-pointer" href="fleet.html">АВТОПАРК</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+<a class="bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3 rounded hover:bg-industrial-orange-glare active:scale-95 transition-all cursor-pointer uppercase" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
+</div>
+</header>
+
+<main class="pt-20">
+<section class="hero-gradient py-16 px-gutter">
+<div style="max-width:900px;margin:0 auto;">
+<div class="reveal active">
+<div class="flex items-center gap-2 mb-4">
+<a href="index.html" class="text-sm text-secondary hover:text-primary-container transition-colors">Главная</a>
+<span class="text-secondary">/</span>
+<span class="text-sm text-primary-container font-semibold">Политика Cookie</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-4" style="font-size:2.25rem;">Политика использования Cookie</h1>
+<p class="text-secondary text-body-lg">Как и зачем мы используем файлы cookie на сайте a2group.by</p>
+<p class="text-secondary text-sm mt-2">Дата последнего обновления: 01 января 2025 г.</p>
+</div>
+</div>
+</section>
+
+<section class="py-12 px-gutter">
+<div style="max-width:900px;margin:0 auto;" class="policy-section reveal active">
+
+<h2>1. Что такое файлы Cookie</h2>
+<p>Cookie (куки) — это небольшие текстовые файлы, которые веб-сайт сохраняет в вашем браузере при посещении. Они позволяют сайту «запомнить» ваши действия и предпочтения на определённый период времени, чтобы вам не приходилось вводить их снова при каждом посещении.</p>
+<p>Cookie не являются программами и не могут содержать вирусы. Они не имеют доступа к другим данным на вашем устройстве.</p>
+
+<h2>2. Какие Cookie мы используем</h2>
+<p>На сайте a2group.by используются следующие категории файлов cookie:</p>
+
+<table class="cookie-table" style="border-radius:0.5rem;overflow:hidden;">
+<thead>
+<tr>
+<th>Название</th>
+<th>Тип</th>
+<th>Срок хранения</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cookies_accepted</code></td>
+<td><span class="badge badge-required">Необходимые</span></td>
+<td>Постоянный</td>
+<td>Запоминает ваше согласие с политикой cookie, чтобы не показывать уведомление повторно</td>
+</tr>
+<tr>
+<td>Сессионные cookie браузера</td>
+<td><span class="badge badge-required">Необходимые</span></td>
+<td>До закрытия браузера</td>
+<td>Обеспечивают корректную работу форм и навигации по сайту</td>
+</tr>
+</tbody>
+</table>
+
+<div style="margin-top:1rem;padding:1rem;background:#f3f4f5;border-radius:0.75rem;border-left:4px solid #10B981;">
+<p style="margin:0;font-size:0.875rem;color:#5f5e5e;"><strong style="color:#166534;">Важно:</strong> Мы не используем аналитические, маркетинговые или рекламные cookie. Мы не отслеживаем вашу активность для показа таргетированной рекламы и не передаём данные cookie третьим лицам.</p>
+</div>
+
+<h2>3. Необходимые (технические) Cookie</h2>
+<p>Технические cookie необходимы для корректного функционирования сайта. Без них ряд функций сайта работать не будет. К таким cookie относятся:</p>
+<ul>
+<li>Cookie, запоминающие ваше согласие с уведомлениями сайта</li>
+<li>Cookie, обеспечивающие работу форм обратной связи</li>
+<li>Cookie, поддерживающие безопасность сессии</li>
+</ul>
+<p>Технические cookie не требуют вашего согласия согласно законодательству о защите персональных данных, однако мы информируем вас об их использовании.</p>
+
+<h2>4. Как отключить или удалить Cookie</h2>
+<p>Вы можете управлять файлами cookie через настройки вашего браузера. Инструкции для популярных браузеров:</p>
+<ul>
+<li><strong>Google Chrome:</strong> Настройки → Конфиденциальность и безопасность → Файлы cookie и другие данные сайтов</li>
+<li><strong>Mozilla Firefox:</strong> Настройки → Приватность и защита → Куки и данные сайтов</li>
+<li><strong>Safari:</strong> Настройки → Конфиденциальность → Управление данными веб-сайтов</li>
+<li><strong>Microsoft Edge:</strong> Настройки → Файлы cookie и разрешения сайтов → Управление файлами cookie</li>
+<li><strong>Яндекс.Браузер:</strong> Настройки → Сайты → Расширенные настройки сайтов → Файлы cookie</li>
+</ul>
+<p>Обратите внимание: отключение технических cookie может привести к некорректной работе некоторых функций сайта.</p>
+
+<h2>5. Согласие и отзыв согласия</h2>
+<p>При первом посещении сайта вам показывается уведомление об использовании cookie. Нажимая кнопку «Принять», вы даёте своё согласие на использование cookie в соответствии с настоящей Политикой.</p>
+<p>Для отзыва согласия вы можете:</p>
+<ul>
+<li>Удалить данные сайта в настройках своего браузера (включая localStorage)</li>
+<li>Использовать режим «инкогнито» при посещении сайта</li>
+</ul>
+
+<h2>6. Изменения в политике</h2>
+<p>Мы оставляем за собой право обновлять настоящую Политику в любое время. Актуальная версия всегда доступна на данной странице. Продолжение использования сайта после внесения изменений означает ваше согласие с обновлённой Политикой.</p>
+
+<h2>7. Контакты</h2>
+<p>Если у вас есть вопросы о нашей политике использования cookie, обратитесь к нам:</p>
+<ul>
+<li>Email: <a href="mailto:info@a2group.by">info@a2group.by</a></li>
+<li>Телефон: <a href="tel:+375447009404">+375 44 700-94-04</a></li>
+</ul>
+<p>Также ознакомьтесь с нашей <a href="privacy.html">Политикой конфиденциальности</a> для получения полной информации об обработке персональных данных.</p>
+
+</div>
+</section>
+</main>
+
+<footer class="w-full py-12 px-gutter grid grid-cols-1 md:grid-cols-4 gap-8 bg-inverse-surface reveal">
+<div class="space-y-4">
+<span class="font-headline-sm text-headline-sm text-surface-pure cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">A2Group</span>
+<p class="font-body-sm text-body-sm text-surface-variant max-w-xs">Профессиональные логистические решения для бизнеса любого масштаба.</p>
+<p class="font-body-sm text-body-sm text-surface-variant" style="font-size:0.75rem;margin-top:0.75rem;line-height:1.6;opacity:0.7;">ИП Александрович Егор Александрович<br>УНП 591202839<br>Юр. адрес: г. Лида, ул. Кооперативная 42<br>Режим работы: 24/7</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Навигация</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="index.html">ГЛАВНАЯ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="services.html">УСЛУГИ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="contacts.html">КОНТАКТЫ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="fleet.html">АВТОПАРК</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Контакты</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="mailto:info@a2group.by">info@a2group.by</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Юридическая информация</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="privacy.html">Политика конфиденциальности</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="cookies.html">Политика Cookie</a>
+<span class="font-body-sm text-body-sm text-surface-variant mt-4 opacity-50">© 2024 A2Group. Все права защищены.</span>
+</div>
+</footer>
+
+<div style="position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:12px;">
+  <a href="https://t.me/a2group_by" target="_blank" style="width:56px;height:56px;border-radius:50%;background:#229ED9;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(34,158,217,0.4);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+  </a>
+  <a href="https://wa.me/375447009404" target="_blank" style="width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"/></svg>
+  </a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+</script>
+
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(25,28,29,0.97);backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,0.1);padding:1.25rem 1.5rem;z-index:99998;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+  <p style="color:#e5e7eb;font-size:0.875rem;margin:0;max-width:700px;">
+    🍪 Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с нашей
+    <a href="cookies.html" style="color:#e68926;text-decoration:underline;">политикой использования cookies</a> и
+    <a href="privacy.html" style="color:#e68926;text-decoration:underline;">политикой конфиденциальности</a>.
+  </p>
+  <div style="display:flex;gap:0.75rem;flex-shrink:0;">
+    <a href="cookies.html" style="color:#9ca3af;font-size:0.8rem;text-decoration:none;padding:0.6rem 1rem;border:1px solid rgba(255,255,255,0.2);border-radius:0.5rem;white-space:nowrap;">Подробнее</a>
+    <button onclick="acceptCookies()" style="background:#e68926;color:white;border:none;padding:0.6rem 1.5rem;border-radius:0.5rem;font-weight:700;font-size:0.875rem;cursor:pointer;white-space:nowrap;">Принять</button>
+  </div>
+</div>
+<script>
+function acceptCookies() {
+  localStorage.setItem('cookies_accepted', 'true');
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+window.addEventListener('load', function() {
+  if (!localStorage.getItem('cookies_accepted')) {
+    document.getElementById('cookie-banner').style.display = 'flex';
+  }
+});
+</script>
+</body></html>

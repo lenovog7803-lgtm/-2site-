@@ -176,7 +176,7 @@ function toggleMobileMenu() {
 <div><span style="color:#ffb778;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:0.75rem;">Адреса</span>
 <p style="font-size:0.875rem;color:#9ca3af;margin-bottom:0.5rem;">Минск, ул. Якубова 66</p>
 <p style="font-size:0.875rem;color:#9ca3af;margin-bottom:1.5rem;">Москва, Пресненская наб. 12</p>
-<span style="font-size:0.75rem;color:#6b7280;">© 2024 A2Group. Все права защищены.</span></div>
+<a style="display:block;font-size:0.875rem;color:#9ca3af;text-decoration:none;margin-bottom:0.5rem;" href="privacy.html">Политика конфиденциальности</a><a style="display:block;font-size:0.875rem;color:#9ca3af;text-decoration:none;margin-bottom:0.75rem;" href="cookies.html">Политика Cookie</a><span style="font-size:0.75rem;color:#6b7280;">© 2024 A2Group. Все права защищены.</span></div>
 </div>
 </footer>
 
@@ -216,6 +216,29 @@ function toggleMobileMenu() {
     }
   };
 })();
+</script>
+
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(25,28,29,0.97);backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,0.1);padding:1.25rem 1.5rem;z-index:99998;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+  <p style="color:#e5e7eb;font-size:0.875rem;margin:0;max-width:700px;">
+    🍪 Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с нашей
+    <a href="cookies.html" style="color:#e68926;text-decoration:underline;">политикой использования cookies</a> и
+    <a href="privacy.html" style="color:#e68926;text-decoration:underline;">политикой конфиденциальности</a>.
+  </p>
+  <div style="display:flex;gap:0.75rem;flex-shrink:0;">
+    <a href="cookies.html" style="color:#9ca3af;font-size:0.8rem;text-decoration:none;padding:0.6rem 1rem;border:1px solid rgba(255,255,255,0.2);border-radius:0.5rem;white-space:nowrap;">Подробнее</a>
+    <button onclick="acceptCookies()" style="background:#e68926;color:white;border:none;padding:0.6rem 1.5rem;border-radius:0.5rem;font-weight:700;font-size:0.875rem;cursor:pointer;white-space:nowrap;">Принять</button>
+  </div>
+</div>
+<script>
+function acceptCookies() {
+  localStorage.setItem('cookies_accepted', 'true');
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+window.addEventListener('load', function() {
+  if (!localStorage.getItem('cookies_accepted')) {
+    document.getElementById('cookie-banner').style.display = 'flex';
+  }
+});
 </script>
 </body>
 </html>
