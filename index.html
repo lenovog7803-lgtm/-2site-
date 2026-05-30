@@ -164,12 +164,20 @@ body { opacity: 0; animation: fadeIn 0.4s ease 0.1s forwards; }
 @media (min-width: 769px) {
   #lead-form {
     min-height: 100vh !important;
-    padding-top: 2rem !important;
+    padding-top: 0 !important;
+    margin-top: -1rem !important;
     align-items: center !important;
   }
-  #lead-form .grid {
-    align-items: center !important;
-    min-height: 80vh !important;
+  #lead-form > .max-w-container-max {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+  #lead-form h1 {
+    font-size: 3.5rem !important;
+    line-height: 4rem !important;
+  }
+  #lead-form .w-full.max-w-md {
+    max-width: 480px !important;
   }
 }
 </style>
@@ -329,19 +337,19 @@ function toggleMobileMenu() {
 </script>
 <main class="pt-16">
 <div style="background:rgba(255,255,255,0.15);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.3);overflow:hidden;position:relative;z-index:39;">
-  <div style="display:flex;animation:ticker 25s linear infinite;width:max-content;padding:0.85rem 0;" onmouseover="this.style.animationPlayState='paused'" onmouseout="this.style.animationPlayState='running'">
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">🎉 АКЦИЯ — Скидка 10% на первый рейс для новых клиентов</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">🚚 Ежедневные рейсы Минск — Москва — СПб</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">📦 Страхование груза 100% на каждом рейсе</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">⚡ Экспресс-доставка за 24 часа</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">💳 Отсрочка платежа для партнёров</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">📞 Поддержка 24/7 — +375 44 700-94-04</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">🎉 АКЦИЯ — Скидка 10% на первый рейс для новых клиентов</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">🚚 Ежедневные рейсы Минск — Москва — СПб</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">📦 Страхование груза 100% на каждом рейсе</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">⚡ Экспресс-доставка за 24 часа</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">💳 Отсрочка платежа для партнёров</span>
-    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">📞 Поддержка 24/7 — +375 44 700-94-04</span>
+  <div style="display:flex;animation:ticker 25s linear infinite;width:max-content;padding:1rem 0;" onmouseover="this.style.animationPlayState='paused'" onmouseout="this.style.animationPlayState='running'">
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#191c1d;letter-spacing:0.02em;">🎉 АКЦИЯ — Скидка 10% на первый рейс для новых клиентов</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#e68926;letter-spacing:0.02em;">🚚 Ежедневные рейсы Минск — Москва — СПб</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#191c1d;letter-spacing:0.02em;">📦 Страхование груза 100% на каждом рейсе</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#e68926;letter-spacing:0.02em;">⚡ Экспресс-доставка за 24 часа</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#191c1d;letter-spacing:0.02em;">💳 Отсрочка платежа для партнёров</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#e68926;letter-spacing:0.02em;">📞 Поддержка 24/7 — +375 44 700-94-04</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#191c1d;letter-spacing:0.02em;">🎉 АКЦИЯ — Скидка 10% на первый рейс для новых клиентов</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#e68926;letter-spacing:0.02em;">🚚 Ежедневные рейсы Минск — Москва — СПб</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#191c1d;letter-spacing:0.02em;">📦 Страхование груза 100% на каждом рейсе</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#e68926;letter-spacing:0.02em;">⚡ Экспресс-доставка за 24 часа</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#191c1d;letter-spacing:0.02em;">💳 Отсрочка платежа для партнёров</span>
+    <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.95rem;color:#e68926;letter-spacing:0.02em;">📞 Поддержка 24/7 — +375 44 700-94-04</span>
   </div>
   <style>@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }</style>
 </div>
