@@ -89,9 +89,23 @@ body {
   transform: translateY(-8px);
 }
 </style>
+<style>
+#preloader {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+</style>
 </head>
 <body class="bg-surface-pure font-body-md text-on-surface">
-<div id="preloader" style="position:fixed;inset:0;background:#191c1d;z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease;">
+<div id="preloader" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#191c1d;z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0;padding:0;overflow:hidden;">
   <div style="display:flex;align-items:center;gap:0px;">
     <span style="font-size:4rem;font-weight:900;color:white;font-family:Inter,sans-serif;animation:fadeLeft 0.8s ease forwards;opacity:0;letter-spacing:-2px;">A</span>
     <span style="font-size:4rem;font-weight:900;color:#e68926;font-family:Inter,sans-serif;animation:fadeLeft 0.8s ease 0.2s forwards;opacity:0;letter-spacing:-2px;">2</span>
