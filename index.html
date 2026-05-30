@@ -240,7 +240,7 @@ function toggleMobileMenu() {
 <div class="space-y-1"><label class="font-label-md text-label-md text-secondary ml-1">Телефон</label>
 <input class="w-full px-4 py-3 bg-white/50 border-transparent focus:border-primary focus:ring-0 rounded-xl transition-all placeholder:text-outline-variant" placeholder="+375 (__) ___-__-__" type="tel"></div>
 </div>
-<button class="btn-premium w-full py-4 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-xl transition-all shadow-lg shadow-primary/20" onclick="window.location.href='contacts.html'">Связаться за 5 минут</button>
+<button class="btn-premium w-full py-4 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-xl transition-all shadow-lg shadow-primary/20" onclick="sendCallForm()">Связаться за 5 минут</button>
 <p class="text-center font-body-sm text-body-sm text-secondary px-4">Мы перезвоним вам в течение 5 минут для уточнения деталей</p>
 </div>
 <div class="hidden space-y-6" id="tab-content-calc">
@@ -254,7 +254,7 @@ function toggleMobileMenu() {
 <input class="w-full px-4 py-3 bg-white/50 border-transparent focus:border-primary focus:ring-0 rounded-xl transition-all placeholder:text-outline-variant" placeholder="20т / 82м³" type="text"></div>
 <div class="space-y-1"><label class="font-label-md text-label-md text-secondary ml-1">Телефон</label>
 <input class="w-full px-4 py-3 bg-white/50 border-transparent focus:border-primary focus:ring-0 rounded-xl transition-all placeholder:text-outline-variant" placeholder="+375 (__) ___-__-__" type="tel"></div>
-<button class="btn-premium w-full py-4 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-xl transition-all shadow-lg shadow-primary/20" onclick="window.location.href='contacts.html'">Получить расчет стоимости</button>
+<button class="btn-premium w-full py-4 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-xl transition-all shadow-lg shadow-primary/20" onclick="sendCalcForm()">Получить расчет стоимости</button>
 </div>
 </div>
 </div>
@@ -582,6 +582,46 @@ function toggleMobileMenu() {
 </div>
 </footer>
 <script>
+        async function sendToTg(text) {
+          await fetch('https://api.telegram.org/bot8889299523:AAGCDvfuPsI042hnKcs83-IR3LQydhbPQoQ/sendMessage', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: '558556324', text: text })
+          });
+        }
+
+        async function sendCallForm() {
+          const inputs = document.querySelectorAll('#tab-content-call input');
+          const name = inputs[0]?.value || 'не указано';
+          const phone = inputs[1]?.value || 'не указано';
+          if (phone.length < 5) { alert('Укажите телефон'); return; }
+          const btn = document.querySelector('#tab-content-call button');
+          btn.textContent = 'Отправляем...'; btn.disabled = true;
+          try {
+            await sendToTg(`📞 Быстрый звонок!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🕐 ${new Date().toLocaleString('ru-RU')}`);
+            btn.textContent = '✅ Ждите звонка!'; btn.style.background = '#10B981';
+            inputs.forEach(i => i.value = '');
+            setTimeout(() => { btn.textContent = 'Связаться за 5 минут'; btn.style.background = ''; btn.disabled = false; }, 4000);
+          } catch(e) { btn.textContent = 'Ошибка, попробуйте ещё раз'; btn.disabled = false; }
+        }
+
+        async function sendCalcForm() {
+          const inputs = document.querySelectorAll('#tab-content-calc input');
+          const from = inputs[0]?.value || 'не указано';
+          const to = inputs[1]?.value || 'не указано';
+          const weight = inputs[2]?.value || 'не указано';
+          const phone = inputs[3]?.value || 'не указано';
+          if (phone.length < 5) { alert('Укажите телефон'); return; }
+          const btn = document.querySelector('#tab-content-calc button');
+          btn.textContent = 'Отправляем...'; btn.disabled = true;
+          try {
+            await sendToTg(`📦 Расчет рейса!\n\n📍 Откуда: ${from}\n📍 Куда: ${to}\n⚖️ Вес/Объем: ${weight}\n📞 Телефон: ${phone}\n🕐 ${new Date().toLocaleString('ru-RU')}`);
+            btn.textContent = '✅ Заявка отправлена!'; btn.style.background = '#10B981';
+            inputs.forEach(i => i.value = '');
+            setTimeout(() => { btn.textContent = 'Получить расчет стоимости'; btn.style.background = ''; btn.disabled = false; }, 4000);
+          } catch(e) { btn.textContent = 'Ошибка, попробуйте ещё раз'; btn.disabled = false; }
+        }
+
         function switchTab(type) {
             const indicator = document.getElementById('tab-indicator');
             const callBtn = document.getElementById('btn-call');
