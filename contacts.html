@@ -69,6 +69,38 @@ body { opacity: 0; animation: fadeIn 0.4s ease 0.1s forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
 </style>
 <style>
+/* ===== ЕДИНЫЙ ШРИФТ НА МОБИЛЬНЫХ (contacts.html) ===== */
+@media (max-width: 768px) {
+  * { font-family: Inter, sans-serif !important; }
+
+  /* Все заголовочные классы → единая шкала */
+  [class*="text-display-lg"], [class*="font-display-lg"],
+  h1 { font-size: 1.75rem !important; line-height: 2.1rem !important; font-weight: 800 !important; }
+
+  [class*="text-headline-lg"], [class*="font-headline-lg"],
+  h2 { font-size: 1.35rem !important; line-height: 1.75rem !important; font-weight: 700 !important; }
+
+  [class*="text-headline-md"], [class*="font-headline-md"],
+  h3 { font-size: 1.1rem !important; line-height: 1.5rem !important; font-weight: 700 !important; }
+
+  [class*="text-headline-sm"], [class*="font-headline-sm"] {
+    font-size: 1rem !important; line-height: 1.4rem !important; font-weight: 600 !important;
+  }
+
+  [class*="text-body-lg"], [class*="font-body-lg"] {
+    font-size: 0.95rem !important; line-height: 1.5rem !important;
+  }
+
+  [class*="text-body-md"], [class*="font-body-md"] {
+    font-size: 0.9rem !important; line-height: 1.4rem !important;
+  }
+
+  [class*="text-label-lg"], [class*="font-label-lg"] {
+    font-size: 0.75rem !important; line-height: 1.1rem !important;
+  }
+}
+</style>
+<style>
 /* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
 @media (max-width: 768px) {
 
