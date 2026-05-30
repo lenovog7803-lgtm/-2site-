@@ -60,6 +60,23 @@
             "label-md":["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}]
         }}}}
     </script>
+<style>
+body {
+  animation: pageFadeIn 0.4s ease forwards;
+}
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-transition {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.page-transition.leaving {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+</style>
 </head>
 <body class="bg-surface-pure font-body-md text-on-surface selection:bg-primary-fixed">
 <div id="preloader" style="position:fixed;inset:0;background:#191c1d;z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease;">
@@ -277,6 +294,23 @@ window.addEventListener('load', function() {
   if (!localStorage.getItem('cookies_accepted')) {
     document.getElementById('cookie-banner').style.display = 'flex';
   }
+});
+</script>
+<script>
+document.querySelectorAll('a[href]').forEach(link => {
+  const href = link.getAttribute('href');
+  if (!href || href.startsWith('#') || href.startsWith('http') || 
+      href.startsWith('mailto') || href.startsWith('tel') ||
+      href.startsWith('javascript')) return;
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.body.style.opacity = '0';
+    document.body.style.transform = 'translateY(8px)';
+    document.body.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    setTimeout(() => {
+      window.location.href = href;
+    }, 300);
+  });
 });
 </script>
 </body></html>
