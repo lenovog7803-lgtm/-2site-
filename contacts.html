@@ -1,5 +1,13 @@
 <!DOCTYPE html><html class="light scroll-smooth" lang="ru"><head>
 <meta charset="utf-8">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CP4701EKB6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CP4701EKB6');
+</script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Контакты A2Group</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -230,6 +238,7 @@ function toggleMobileMenu() {
         if (formContent && successState) {
           formContent.classList.add('hidden');
           successState.classList.remove('hidden');
+          setTimeout(() => { window.location.href = 'thanks.html'; }, 1500);
         } else {
           if (btn) btn.textContent = '✅ Отправлено!';
           setTimeout(() => { form.reset(); if (btn) { btn.textContent = 'СВЯЗАТЬСЯ'; btn.disabled = false; } }, 3000);

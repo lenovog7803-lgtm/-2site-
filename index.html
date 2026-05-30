@@ -1,6 +1,15 @@
 <!DOCTYPE html><html class="light scroll-smooth" lang="ru" style="scroll-behavior: smooth;"><head>
 <meta charset="utf-8">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CP4701EKB6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CP4701EKB6');
+</script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>A2Group — Грузоперевозки РБ и РФ</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -601,7 +610,7 @@ function toggleMobileMenu() {
             await sendToTg(`📞 Быстрый звонок!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🕐 ${new Date().toLocaleString('ru-RU')}`);
             btn.textContent = '✅ Ждите звонка!'; btn.style.background = '#10B981';
             inputs.forEach(i => i.value = '');
-            setTimeout(() => { btn.textContent = 'Связаться за 5 минут'; btn.style.background = ''; btn.disabled = false; }, 4000);
+            setTimeout(() => { window.location.href = 'thanks.html'; }, 1500);
           } catch(e) { btn.textContent = 'Ошибка, попробуйте ещё раз'; btn.disabled = false; }
         }
 
@@ -618,7 +627,7 @@ function toggleMobileMenu() {
             await sendToTg(`📦 Расчет рейса!\n\n📍 Откуда: ${from}\n📍 Куда: ${to}\n⚖️ Вес/Объем: ${weight}\n📞 Телефон: ${phone}\n🕐 ${new Date().toLocaleString('ru-RU')}`);
             btn.textContent = '✅ Заявка отправлена!'; btn.style.background = '#10B981';
             inputs.forEach(i => i.value = '');
-            setTimeout(() => { btn.textContent = 'Получить расчет стоимости'; btn.style.background = ''; btn.disabled = false; }, 4000);
+            setTimeout(() => { window.location.href = 'thanks.html'; }, 1500);
           } catch(e) { btn.textContent = 'Ошибка, попробуйте ещё раз'; btn.disabled = false; }
         }
 

@@ -1,0 +1,247 @@
+<!DOCTYPE html><html class="light scroll-smooth" lang="ru"><head>
+<meta charset="utf-8">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CP4701EKB6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CP4701EKB6');
+</script>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>404 — Страница не найдена | A2Group</title>
+<meta name="robots" content="noindex, nofollow">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(255,255,255,0.4); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.5); }
+        .btn-premium { transition: all 0.3s cubic-bezier(0.4,0,0.2,1); }
+        .btn-premium:hover { box-shadow: 0 0 20px rgba(230,137,38,0.4); transform: scale(1.05); }
+        .btn-premium:active { transform: scale(0.95); }
+
+        /* Road and truck animation */
+        .road-container {
+            position: relative;
+            width: 100%;
+            height: 80px;
+            overflow: hidden;
+            margin: 2.5rem 0;
+        }
+        .road {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 32px;
+            background: #2e3132;
+            border-radius: 4px;
+        }
+        .road::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: repeating-linear-gradient(90deg, #e68926 0, #e68926 30px, transparent 30px, transparent 60px);
+            transform: translateY(-50%);
+            animation: roadLines 0.6s linear infinite;
+        }
+        @keyframes roadLines {
+            from { background-position: 0 0; }
+            to { background-position: -60px 0; }
+        }
+        .truck {
+            position: absolute;
+            bottom: 32px;
+            animation: driveTruck 5s linear infinite;
+        }
+        @keyframes driveTruck {
+            from { left: -140px; }
+            to { left: calc(100% + 20px); }
+        }
+        /* wheel spin */
+        .wheel { animation: spin 0.4s linear infinite; transform-origin: center; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* 404 bounce */
+        @keyframes bounce404 {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        .num-4a { animation: bounce404 1.8s ease-in-out 0s infinite; }
+        .num-0  { animation: bounce404 1.8s ease-in-out 0.2s infinite; }
+        .num-4b { animation: bounce404 1.8s ease-in-out 0.4s infinite; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-1 { animation: fadeInUp 0.6s ease 0.3s both; }
+        .fade-2 { animation: fadeInUp 0.6s ease 0.5s both; }
+        .fade-3 { animation: fadeInUp 0.6s ease 0.7s both; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{
+            "outline":"#877364","secondary":"#5f5e5e","inverse-on-surface":"#f0f1f2",
+            "surface-container":"#edeeef","surface-pure":"#FFFFFF","primary-container":"#e68926",
+            "inverse-surface":"#2e3132","surface-variant":"#e1e3e4","surface-dim":"#d9dadb",
+            "surface-container-low":"#f3f4f5","on-tertiary-container":"#303743","on-secondary":"#ffffff",
+            "surface-tint":"#8e4e00","surface-muted":"#F8F9FA","on-secondary-fixed":"#1c1b1b",
+            "secondary-container":"#e2dfde","industrial-orange-glare":"#FF9F3D","tertiary":"#585f6c",
+            "primary-fixed-dim":"#ffb778","status-success":"#10B981","surface":"#f8f9fa",
+            "outline-variant":"#dac2b0","surface-container-highest":"#e1e3e4","tertiary-fixed":"#dce2f3",
+            "surface-container-high":"#e7e8e9","border-glass":"rgba(255,255,255,0.4)",
+            "surface-container-lowest":"#ffffff","on-background":"#191c1d","on-primary":"#ffffff",
+            "on-surface-variant":"#544436","surface-bright":"#f8f9fa","primary":"#8e4e00",
+            "error":"#ba1a1a","tertiary-container":"#99a0af","primary-fixed":"#ffdcc1",
+            "on-primary-container":"#552c00","background":"#f8f9fa","on-primary-fixed":"#2e1500","on-surface":"#191c1d"
+        }, spacing:{"gutter":"24px","container-max":"1440px","margin-mobile":"16px","unit":"4px","margin-desktop":"40px"},
+        fontFamily:{"headline-md":["Inter"],"body-md":["Inter"],"display-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"label-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"]},
+        fontSize:{
+            "headline-md":["24px",{"lineHeight":"32px","fontWeight":"700"}],
+            "body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],
+            "display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"800"}],
+            "headline-lg-mobile":["28px",{"lineHeight":"34px","fontWeight":"700"}],
+            "body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],
+            "headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],
+            "headline-sm":["18px",{"lineHeight":"24px","fontWeight":"700"}],
+            "label-lg":["14px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],
+            "body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],
+            "label-md":["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}]
+        }}}}
+    </script>
+</head>
+<body class="bg-surface-pure font-body-md text-on-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-surface-pure/70 backdrop-blur-xl border-b border-glass shadow-sm">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-display-lg font-extrabold text-on-surface cursor-pointer" href="index.html">A2Group</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200" href="index.html">ГЛАВНАЯ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200" href="services.html">УСЛУГИ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200" href="contacts.html">КОНТАКТЫ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors duration-200" href="fleet.html">АВТОПАРК</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-lg text-label-lg text-secondary hover:text-primary-container transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+<a class="bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3 rounded hover:bg-industrial-orange-glare active:scale-95 transition-all uppercase" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
+</div>
+</header>
+
+<main class="pt-20 min-h-screen flex items-center justify-center" style="background:radial-gradient(circle at 50% 30%, rgba(230,137,38,0.06) 0%, transparent 60%);">
+<div style="max-width:640px;margin:0 auto;padding:3rem 1.5rem;text-align:center;">
+
+  <!-- Bouncing 404 -->
+  <div style="display:flex;justify-content:center;align-items:baseline;gap:0.25rem;margin-bottom:1.5rem;">
+    <span class="num-4a" style="font-size:clamp(5rem,15vw,8rem);font-weight:900;color:#e68926;line-height:1;">4</span>
+    <span class="num-0"  style="font-size:clamp(5rem,15vw,8rem);font-weight:900;color:#2e3132;line-height:1;">0</span>
+    <span class="num-4b" style="font-size:clamp(5rem,15vw,8rem);font-weight:900;color:#e68926;line-height:1;">4</span>
+  </div>
+
+  <!-- Animated truck on road -->
+  <div class="road-container">
+    <div class="road"></div>
+    <div class="truck">
+      <svg width="120" height="46" viewBox="0 0 120 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- trailer -->
+        <rect x="0" y="8" width="72" height="28" rx="3" fill="#2e3132"/>
+        <rect x="2" y="10" width="68" height="24" rx="2" fill="#3d4244"/>
+        <!-- cab -->
+        <rect x="72" y="14" width="32" height="22" rx="3" fill="#2e3132"/>
+        <rect x="80" y="16" width="18" height="12" rx="2" fill="#93c5fd"/>
+        <!-- exhaust pipe -->
+        <rect x="100" y="8" width="4" height="10" rx="1" fill="#4b5563"/>
+        <!-- front bumper -->
+        <rect x="104" y="30" width="10" height="4" rx="1" fill="#e68926"/>
+        <!-- rear light -->
+        <rect x="0" y="18" width="3" height="8" rx="1" fill="#e68926"/>
+        <!-- wheels -->
+        <g transform="translate(14,36)">
+          <circle r="9" fill="#1f2937" class="wheel"/>
+          <circle r="5" fill="#6b7280"/>
+          <circle r="2" fill="#d1d5db"/>
+        </g>
+        <g transform="translate(52,36)">
+          <circle r="9" fill="#1f2937" class="wheel"/>
+          <circle r="5" fill="#6b7280"/>
+          <circle r="2" fill="#d1d5db"/>
+        </g>
+        <g transform="translate(92,36)">
+          <circle r="9" fill="#1f2937" class="wheel"/>
+          <circle r="5" fill="#6b7280"/>
+          <circle r="2" fill="#d1d5db"/>
+        </g>
+        <!-- A2 logo on trailer -->
+        <text x="28" y="28" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#e68926" text-anchor="middle">A2</text>
+      </svg>
+    </div>
+  </div>
+
+  <h1 class="fade-1" style="font-size:1.75rem;font-weight:800;color:#191c1d;margin-bottom:0.75rem;">Страница не найдена</h1>
+  <p class="fade-2" style="font-size:1rem;color:#5f5e5e;line-height:1.7;margin-bottom:2.5rem;">
+    Возможно, страница была удалена или вы перешли по неверной ссылке.<br>Но наши грузовики всегда знают дорогу!
+  </p>
+
+  <div class="fade-3" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="index.html" class="btn-premium" style="background:#e68926;color:white;padding:0.875rem 2rem;border-radius:0.75rem;font-weight:700;font-size:0.95rem;text-decoration:none;display:inline-block;">
+      На главную
+    </a>
+    <a href="contacts.html" class="btn-premium" style="background:#2e3132;color:white;padding:0.875rem 2rem;border-radius:0.75rem;font-weight:700;font-size:0.95rem;text-decoration:none;display:inline-block;">
+      Связаться с нами
+    </a>
+  </div>
+
+</div>
+</main>
+
+<footer class="w-full py-12 px-gutter grid grid-cols-1 md:grid-cols-4 gap-8 bg-inverse-surface">
+<div class="space-y-4">
+<span class="font-headline-sm text-headline-sm text-surface-pure cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">A2Group</span>
+<p class="font-body-sm text-body-sm text-surface-variant max-w-xs">Профессиональные логистические решения для бизнеса любого масштаба.</p>
+<p class="font-body-sm text-body-sm text-surface-variant" style="font-size:0.75rem;margin-top:0.75rem;line-height:1.6;opacity:0.7;">ИП Александрович Егор Александрович<br>УНП 591202839<br>Юр. адрес: г. Лида, ул. Кооперативная 42<br>Режим работы: 24/7</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Навигация</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="index.html">ГЛАВНАЯ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="services.html">УСЛУГИ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="contacts.html">КОНТАКТЫ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="fleet.html">АВТОПАРК</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Контакты</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="mailto:info@a2group.by">info@a2group.by</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2">Юридическая информация</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="privacy.html">Политика конфиденциальности</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-industrial-orange-glare transition-colors" href="cookies.html">Политика Cookie</a>
+<span class="font-body-sm text-body-sm text-surface-variant mt-4 opacity-50">© 2024 A2Group. Все права защищены.</span>
+</div>
+</footer>
+
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(25,28,29,0.97);backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,0.1);padding:1.25rem 1.5rem;z-index:99998;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+  <p style="color:#e5e7eb;font-size:0.875rem;margin:0;max-width:700px;">
+    🍪 Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с нашей
+    <a href="cookies.html" style="color:#e68926;text-decoration:underline;">политикой использования cookies</a> и
+    <a href="privacy.html" style="color:#e68926;text-decoration:underline;">политикой конфиденциальности</a>.
+  </p>
+  <div style="display:flex;gap:0.75rem;flex-shrink:0;">
+    <a href="cookies.html" style="color:#9ca3af;font-size:0.8rem;text-decoration:none;padding:0.6rem 1rem;border:1px solid rgba(255,255,255,0.2);border-radius:0.5rem;white-space:nowrap;">Подробнее</a>
+    <button onclick="acceptCookies()" style="background:#e68926;color:white;border:none;padding:0.6rem 1.5rem;border-radius:0.5rem;font-weight:700;font-size:0.875rem;cursor:pointer;white-space:nowrap;">Принять</button>
+  </div>
+</div>
+<script>
+function acceptCookies() {
+  localStorage.setItem('cookies_accepted', 'true');
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+window.addEventListener('load', function() {
+  if (!localStorage.getItem('cookies_accepted')) {
+    document.getElementById('cookie-banner').style.display = 'flex';
+  }
+});
+</script>
+</body></html>
