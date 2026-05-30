@@ -161,6 +161,7 @@ body { opacity: 0; animation: fadeIn 0.4s ease 0.1s forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
 </style>
 <style>
+#lead-form { padding-top: 2rem !important; }
 @media (max-width: 768px) {
   .hero-gradient { min-height: auto !important; padding: 2rem 1rem !important; }
   h1.text-display-lg { font-size: 2rem !important; line-height: 2.5rem !important; }
@@ -331,8 +332,8 @@ function toggleMobileMenu() {
   m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
 }
 </script>
-<main class="pt-20">
-<div style="background:rgba(255,255,255,0.15);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.3);overflow:hidden;position:relative;z-index:40;">
+<main class="pt-16">
+<div style="background:rgba(255,255,255,0.15);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.3);overflow:hidden;position:relative;z-index:39;">
   <div style="display:flex;animation:ticker 25s linear infinite;width:max-content;padding:0.85rem 0;" onmouseover="this.style.animationPlayState='paused'" onmouseout="this.style.animationPlayState='running'">
     <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#191c1d;letter-spacing:0.02em;">🎉 АКЦИЯ — Скидка 10% на первый рейс для новых клиентов</span>
     <span style="white-space:nowrap;padding:0 3rem;font-weight:700;font-size:0.9rem;color:#e68926;letter-spacing:0.02em;">🚚 Ежедневные рейсы Минск — Москва — СПб</span>
@@ -349,7 +350,7 @@ function toggleMobileMenu() {
   </div>
   <style>@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }</style>
 </div>
-<section class="relative min-h-[921px] flex items-center overflow-hidden hero-gradient" id="lead-form">
+<section class="relative min-h-[921px] flex items-center overflow-hidden hero-gradient" id="lead-form" style="padding-top: 3rem; padding-bottom: 3rem;">
 <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
 <img alt="Logistics background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsyxG2gjQr4B_2H1qd94Da3DadC9xCBXuR05p9ge_0OgdFvdekGT0UKgon8G1Eo3-gxbUw7eSidQ-PmowE2LtsIOt2J2M_xwIcZuAFFqr0BM3pTz2PFfi9_Uwl6ajh32H-7MRLR8kXtrFJf6F-wv_kcNT0l0hsxJbJwUiepS2X77smUYRP2kBeCoOBD8-MLZ6hpIPUv7zXyiVFJeVuWu3cJrrHIa37tLPRKeJDxzlVcsPvDh7eRg58msbm3QmvoIJcq59ph9ykP9WO" style="width:100%;height:100%;object-fit:cover;object-position:center;">
 <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(248,249,250,0.95) 0%,rgba(248,249,250,0.3) 60%,transparent 100%);"></div>
