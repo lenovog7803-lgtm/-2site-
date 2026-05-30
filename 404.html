@@ -348,4 +348,9 @@ window.addEventListener('load', function() {
 </div>
 <!-- Отступ снизу чтобы контент не перекрывался панелью -->
 <div class="md:hidden" style="height:80px;"></div>
+<style>
+@media (min-width: 769px) {
+  div[style*="height:80px"] { display: none !important; }
+}
+</style>
 </body></html>
