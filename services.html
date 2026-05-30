@@ -76,14 +76,21 @@ tailwind.config = {
 </head>
 <body class="bg-gray-50 text-gray-900">
 <div id="preloader" style="position:fixed;inset:0;background:#191c1d;z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease;">
-  <div style="font-size:3rem;animation:drive 1s ease-in-out infinite;display:inline-block;margin-bottom:1.5rem;">🚚</div>
-  <p style="color:#9ca3af;font-size:0.8rem;letter-spacing:0.3em;font-family:Inter,sans-serif;text-transform:uppercase;">A2Group</p>
-  <p style="color:#6b7280;font-size:0.7rem;letter-spacing:0.1em;font-family:Inter,sans-serif;margin-top:0.5rem;">Загрузка...</p>
+  <div style="display:flex;align-items:center;gap:0px;">
+    <span style="font-size:4rem;font-weight:900;color:white;font-family:Inter,sans-serif;animation:fadeLeft 0.8s ease forwards;opacity:0;letter-spacing:-2px;">A</span>
+    <span style="font-size:4rem;font-weight:900;color:#e68926;font-family:Inter,sans-serif;animation:fadeLeft 0.8s ease 0.2s forwards;opacity:0;letter-spacing:-2px;">2</span>
+    <span style="font-size:4rem;font-weight:900;color:white;font-family:Inter,sans-serif;animation:fadeLeft 0.8s ease 0.4s forwards;opacity:0;letter-spacing:-2px;">Group</span>
+  </div>
+  <div style="width:0;height:3px;background:linear-gradient(90deg,#e68926,#ff9f3d);border-radius:2px;margin-top:1rem;animation:line 1.2s ease 0.6s forwards;"></div>
 </div>
 <style>
-@keyframes drive {
-  0%,100% { transform: translateX(-10px); }
-  50% { transform: translateX(10px); }
+@keyframes fadeLeft {
+  0% { opacity:0; transform:translateX(-20px); }
+  100% { opacity:1; transform:translateX(0); }
+}
+@keyframes line {
+  0% { width:0; }
+  100% { width:180px; }
 }
 </style>
 <script>
@@ -92,7 +99,7 @@ window.addEventListener('load', function() {
   setTimeout(function() {
     p.style.opacity = '0';
     setTimeout(function() { p.style.display = 'none'; }, 600);
-  }, 1500);
+  }, 2000);
 });
 </script>
 <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-surface-pure/80 backdrop-blur-xl border-b border-glass shadow-sm" id="top">

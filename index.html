@@ -159,14 +159,21 @@
 </head>
 <body class="bg-surface-pure font-body-md text-on-surface selection:bg-primary-fixed antialiased">
 <div id="preloader" style="position:fixed;inset:0;background:#191c1d;z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease;">
-  <div style="font-size:3rem;animation:drive 1s ease-in-out infinite;display:inline-block;margin-bottom:1.5rem;">🚚</div>
-  <p style="color:#9ca3af;font-size:0.8rem;letter-spacing:0.3em;font-family:Inter,sans-serif;text-transform:uppercase;">A2Group</p>
-  <p style="color:#6b7280;font-size:0.7rem;letter-spacing:0.1em;font-family:Inter,sans-serif;margin-top:0.5rem;">Загрузка...</p>
+  <div style="display:flex;align-items:center;gap:0px;">
+    <span style="font-size:4rem;font-weight:900;color:white;font-family:Inter,sans-serif;animation:fadeLeft 0.8s ease forwards;opacity:0;letter-spacing:-2px;">A</span>
+    <span style="font-size:4rem;font-weight:900;color:#e68926;font-family:Inter,sans-serif;animation:fadeLeft 0.8s ease 0.2s forwards;opacity:0;letter-spacing:-2px;">2</span>
+    <span style="font-size:4rem;font-weight:900;color:white;font-family:Inter,sans-serif;animation:fadeLeft 0.8s ease 0.4s forwards;opacity:0;letter-spacing:-2px;">Group</span>
+  </div>
+  <div style="width:0;height:3px;background:linear-gradient(90deg,#e68926,#ff9f3d);border-radius:2px;margin-top:1rem;animation:line 1.2s ease 0.6s forwards;"></div>
 </div>
 <style>
-@keyframes drive {
-  0%,100% { transform: translateX(-10px); }
-  50% { transform: translateX(10px); }
+@keyframes fadeLeft {
+  0% { opacity:0; transform:translateX(-20px); }
+  100% { opacity:1; transform:translateX(0); }
+}
+@keyframes line {
+  0% { width:0; }
+  100% { width:180px; }
 }
 </style>
 <script>
@@ -175,7 +182,7 @@ window.addEventListener('load', function() {
   setTimeout(function() {
     p.style.opacity = '0';
     setTimeout(function() { p.style.display = 'none'; }, 600);
-  }, 1500);
+  }, 2000);
 });
 </script>
 <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-surface-pure/80 backdrop-blur-xl border-b border-glass shadow-sm" id="top">
@@ -498,67 +505,146 @@ function toggleMobileMenu() {
 @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 </style>
 </section>
-<section id="partners" style="background:#f8f9fa;padding:5rem 1.5rem;">
-<div style="max-width:1440px;margin:0 auto;">
-<div style="text-align:center;margin-bottom:3rem;">
+<section id="partners" style="background:white;padding:5rem 0;overflow:hidden;">
+<div style="max-width:1440px;margin:0 auto;padding:0 1.5rem;text-align:center;margin-bottom:3rem;">
 <h2 style="font-size:2rem;font-weight:800;margin-bottom:0.5rem;">Партнёры и сертификаты</h2>
 <div style="width:6rem;height:4px;background:#e68926;border-radius:2px;margin:0 auto 1rem;"></div>
 <p style="color:#6b7280;max-width:600px;margin:0 auto;">Работаем с ведущими страховыми компаниями, банками и сертифицирующими органами</p>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;align-items:stretch;">
+<div style="position:relative;">
+<div style="display:flex;gap:2rem;animation:scrollPartners 30s linear infinite;width:max-content;padding:1rem 0;" onmouseover="this.style.animationPlayState='paused'" onmouseout="this.style.animationPlayState='running'">
 
-  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Alfa-Bank_logo.svg/320px-Alfa-Bank_logo.svg.png" alt="Альфа-Банк" style="height:40px;object-fit:contain;filter:grayscale(20%);">
-    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Альфа-Банк</div>
-    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Банк-партнёр</div>
-  </div>
 
-  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Belarusbank_logo.svg/320px-Belarusbank_logo.svg.png" alt="Белгосстрах" style="height:40px;object-fit:contain;filter:grayscale(20%);" onerror="this.style.display='none'">
-    <div style="font-size:2rem;">🛡️</div>
-    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Белгосстрах</div>
-    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Страхование грузов</div>
-  </div>
-
-  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/DHL_Logo.svg/320px-DHL_Logo.svg.png" alt="DHL" style="height:40px;object-fit:contain;">
-    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">DHL Express</div>
-    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Партнёр по экспрессу</div>
-  </div>
-
-  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Allianz_logo.svg/320px-Allianz_logo.svg.png" alt="Allianz" style="height:40px;object-fit:contain;">
-    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Allianz</div>
-    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Страхование CMR</div>
-  </div>
-
-  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Scania_logo.svg/320px-Scania_logo.svg.png" alt="Scania" style="height:40px;object-fit:contain;">
-    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Scania</div>
-    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Техника автопарка</div>
-  </div>
-
-  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Volvo-Trucks-logo.svg/320px-Volvo-Trucks-logo.svg.png" alt="Volvo" style="height:40px;object-fit:contain;" onerror="this.style.display='none'">
-    <div style="font-size:2rem;">🚛</div>
-    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">Volvo Trucks</div>
-    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Техника автопарка</div>
-  </div>
-
-  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
-    <div style="font-size:2rem;">📋</div>
-    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">TIR Carnet</div>
-    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Международные перевозки</div>
-  </div>
-
-  <div style="background:white;border-radius:1.25rem;padding:1.75rem 2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;align-items:center;gap:0.75rem;min-width:160px;max-width:180px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)'">
-    <div style="font-size:2rem;">⚠️</div>
-    <div style="font-weight:700;font-size:0.85rem;text-align:center;color:#191c1d;">ADR сертификат</div>
-    <div style="color:#9ca3af;font-size:0.75rem;text-align:center;">Опасные грузы 1-9 класс</div>
-  </div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Alfa-Bank_logo.svg/320px-Alfa-Bank_logo.svg.png" style="height:36px;object-fit:contain;" alt="Альфа-Банк">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Альфа-Банк</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Банк-партнёр</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">🛡️</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Белгосстрах</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Страхование грузов</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/DHL_Logo.svg/320px-DHL_Logo.svg.png" style="height:36px;object-fit:contain;" alt="DHL">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">DHL Express</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Партнёр по экспрессу</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Allianz_logo.svg/320px-Allianz_logo.svg.png" style="height:36px;object-fit:contain;" alt="Allianz">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Allianz</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Страхование CMR</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Scania_logo.svg/320px-Scania_logo.svg.png" style="height:36px;object-fit:contain;" alt="Scania">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Scania</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Техника автопарка</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2rem;">🚛</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Volvo Trucks</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Техника автопарка</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">📋</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">TIR Carnet</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Международные перевозки</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">⚠️</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">ADR сертификат</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Опасные грузы 1-9</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mercedes-Benz_Logo_2010.svg/240px-Mercedes-Benz_Logo_2010.svg.png" style="height:36px;object-fit:contain;" alt="Mercedes">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Mercedes-Benz</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Техника автопарка</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">🏦</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">БСБ Банк</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Финансовый партнёр</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">📄</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">CMR страхование</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Каждый рейс</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Man_se_logo.svg/240px-Man_se_logo.svg.png" style="height:36px;object-fit:contain;" alt="MAN">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">MAN Trucks</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Техника автопарка</span>
+</div>
+<!-- Дубль для бесконечной прокрутки -->
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Alfa-Bank_logo.svg/320px-Alfa-Bank_logo.svg.png" style="height:36px;object-fit:contain;" alt="Альфа-Банк">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Альфа-Банк</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Банк-партнёр</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">🛡️</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Белгосстрах</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Страхование грузов</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/DHL_Logo.svg/320px-DHL_Logo.svg.png" style="height:36px;object-fit:contain;" alt="DHL">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">DHL Express</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Партнёр по экспрессу</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Allianz_logo.svg/320px-Allianz_logo.svg.png" style="height:36px;object-fit:contain;" alt="Allianz">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Allianz</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Страхование CMR</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Scania_logo.svg/320px-Scania_logo.svg.png" style="height:36px;object-fit:contain;" alt="Scania">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Scania</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Техника автопарка</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2rem;">🚛</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Volvo Trucks</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Техника автопарка</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">📋</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">TIR Carnet</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Международные перевозки</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">⚠️</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">ADR сертификат</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Опасные грузы 1-9</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mercedes-Benz_Logo_2010.svg/240px-Mercedes-Benz_Logo_2010.svg.png" style="height:36px;object-fit:contain;" alt="Mercedes">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">Mercedes-Benz</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Техника автопарка</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">🏦</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">БСБ Банк</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Финансовый партнёр</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<div style="font-size:2.5rem;">📄</div>
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">CMR страхование</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Каждый рейс</span>
+</div>
+<div style="background:#f8f9fa;border-radius:1.5rem;padding:2rem 2.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:180px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(230,137,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.06)'">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Man_se_logo.svg/240px-Man_se_logo.svg.png" style="height:36px;object-fit:contain;" alt="MAN">
+<span style="font-weight:700;font-size:0.85rem;color:#191c1d;">MAN Trucks</span>
+<span style="color:#9ca3af;font-size:0.75rem;">Техника автопарка</span>
+</div>
 
 </div>
 </div>
+<style>
+@keyframes scrollPartners {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
 </section>
 <section class="py-24 bg-surface-muted scroll-mt-20" id="fleet-section">
 <div class="max-w-container-max mx-auto px-gutter">
