@@ -156,21 +156,23 @@ body {
 }
 </style>
 <script>
-window.addEventListener('load', function() {
+(function() {
   const p = document.getElementById('preloader');
-  // Показываем только если зашли напрямую или обновили страницу
-  const isReload = performance.navigation.type === 1 || 
-                   !sessionStorage.getItem('visited');
-  if (!isReload) {
+  if (!p) return;
+  const isFirstVisit = !sessionStorage.getItem('visited');
+  const isReload = performance.getEntriesByType('navigation')[0]?.type === 'reload';
+  if (!isFirstVisit && !isReload) {
     p.style.display = 'none';
     return;
   }
   sessionStorage.setItem('visited', 'true');
-  setTimeout(function() {
-    p.style.opacity = '0';
-    setTimeout(function() { p.style.display = 'none'; }, 600);
-  }, 2000);
-});
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      p.style.opacity = '0';
+      setTimeout(function() { p.style.display = 'none'; }, 600);
+    }, 2000);
+  });
+})();
 </script>
 <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-surface-pure/70 backdrop-blur-xl border-b border-glass shadow-sm">
 <div class="flex items-center gap-8">
