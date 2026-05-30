@@ -313,6 +313,7 @@ body { opacity: 0; animation: fadeIn 0.4s ease 0.1s forwards; }
 <a class="hidden lg:block font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
 <a class="btn-premium bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-xl shadow-lg shadow-primary/20 cursor-pointer" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
 </div>
+<a href="contacts.html" class="md:hidden flex items-center gap-1 bg-primary-container text-white text-xs font-bold px-3 py-2 rounded-lg" style="white-space:nowrap;">📋 Расчёт</a>
 <button id="burger" onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-1.5 p-2 ml-2" style="cursor:pointer;background:none;border:none;">
   <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
   <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
@@ -864,4 +865,14 @@ window.addEventListener('load', function() {
   }
 });
 </script>
+<div class="md:hidden" style="position:fixed;bottom:0;left:0;right:0;z-index:9997;background:white;border-top:1px solid #e5e7eb;padding:0.75rem 1rem;display:flex;gap:0.75rem;box-shadow:0 -4px 20px rgba(0,0,0,0.1);">
+  <a href="tel:+375447009404" style="flex:1;background:#f3f4f6;color:#191c1d;padding:0.875rem;border-radius:0.75rem;font-weight:700;font-size:0.85rem;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+    📞 Позвонить
+  </a>
+  <a href="contacts.html" style="flex:1;background:#e68926;color:white;padding:0.875rem;border-radius:0.75rem;font-weight:700;font-size:0.85rem;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+    📋 Получить расчёт
+  </a>
+</div>
+<!-- Отступ снизу чтобы контент не перекрывался панелью -->
+<div class="md:hidden" style="height:80px;"></div>
 </body></html>
