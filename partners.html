@@ -1,0 +1,333 @@
+<!DOCTYPE html><html class="light scroll-smooth" lang="ru" style="scroll-behavior: smooth;"><head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="favicon-96x96.png?v=5" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=5" />
+<link rel="shortcut icon" href="favicon.ico?v=5" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=5" />
+<link rel="manifest" href="site.webmanifest" />
+<meta name="theme-color" content="#e68926">
+<meta property="og:title" content="Партнёрам — A2Group">
+<meta property="og:description" content="Зарабатывайте вместе с A2Group. Агент, субподрядчик или франшиза — выберите свой формат партнёрства.">
+<meta property="og:image" content="https://a2group.by/apple-touch-icon.png">
+<meta property="og:url" content="https://a2group.by/partners.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A2Group">
+<meta name="twitter:card" content="summary_large_image">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Партнёрам — A2Group</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); will-change: opacity, transform; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.glass-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 30px 50px rgba(0,0,0,0.04); }
+.hover-lift { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+.hover-lift:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 40px rgba(230,137,38,0.1); }
+</style>
+<script id="tailwind-config">
+tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{
+  "primary":"#E68926","primary-container":"#E68926","industrial-orange-glare":"#FF9F3D",
+  "on-primary":"#ffffff","on-primary-container":"#552c00","secondary":"#5f5e5e",
+  "surface-pure":"#FFFFFF","surface":"#f8f9fa","on-surface":"#191c1d",
+  "inverse-surface":"#2e3132","surface-variant":"#e1e3e4","surface-container":"#edeeef",
+  "surface-container-low":"#f3f4f5","border-glass":"rgba(255,255,255,0.4)",
+  "outline-variant":"#dac2b0","status-success":"#10B981",
+  "primary-fixed":"#ffdcc1","on-primary-fixed":"#2e1500","inverse-primary":"#ffb778"
+}, spacing:{"gutter":"24px","container-max":"1440px","margin-desktop":"40px"},
+fontFamily:{"display-lg":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],
+  "headline-sm":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],
+  "label-lg":["Inter"],"label-md":["Inter"]},
+fontSize:{
+  "display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"800"}],
+  "headline-lg":["32px",{"lineHeight":"40px","fontWeight":"800"}],
+  "headline-md":["24px",{"lineHeight":"32px","fontWeight":"800"}],
+  "headline-sm":["18px",{"lineHeight":"24px","fontWeight":"800"}],
+  "body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],
+  "body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],
+  "body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],
+  "label-lg":["14px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],
+  "label-md":["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}]
+}}}}
+</script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<div id="preloader" style="position:fixed;inset:0;background:#191c1d;z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease;">
+  <div style="position:relative;margin-bottom:2rem;">
+    <img src="apple-touch-icon.png" style="width:80px;height:80px;border-radius:1rem;animation:pulse 1.5s ease-in-out infinite;">
+  </div>
+  <div style="display:flex;gap:8px;">
+    <div style="width:10px;height:10px;background:#e68926;border-radius:50%;animation:bounce 0.8s ease-in-out infinite;"></div>
+    <div style="width:10px;height:10px;background:#e68926;border-radius:50%;animation:bounce 0.8s ease-in-out 0.15s infinite;"></div>
+    <div style="width:10px;height:10px;background:#e68926;border-radius:50%;animation:bounce 0.8s ease-in-out 0.3s infinite;"></div>
+  </div>
+  <p style="color:#9ca3af;font-size:0.8rem;margin-top:1.5rem;letter-spacing:0.2em;font-family:Inter,sans-serif;">A2GROUP</p>
+</div>
+<style>
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px);background:#ff9f3d;} }
+@keyframes pulse { 0%,100%{transform:scale(1);opacity:1;} 50%{transform:scale(1.08);opacity:0.85;} }
+</style>
+<script>
+window.addEventListener('load', function() {
+  const p = document.getElementById('preloader');
+  setTimeout(function() { p.style.opacity='0'; setTimeout(function(){ p.style.display='none'; }, 600); }, 800);
+});
+</script>
+
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-surface-pure/80 backdrop-blur-xl border-b border-glass shadow-sm">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-headline-md font-extrabold text-on-surface" href="index.html">A2Group</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="index.html">ГЛАВНАЯ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="services.html">УСЛУГИ</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="contacts.html">КОНТАКТЫ</a>
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="partners.html">ПАРТНЁРАМ</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+<a class="bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-xl hover:bg-industrial-orange-glare transition-all" href="contacts.html">ПОЛУЧИТЬ РАСЧЕТ</a>
+</div>
+<button id="burger" onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-1.5 p-2 ml-2" style="cursor:pointer;background:none;border:none;">
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#191c1d;border-radius:2px;transition:all 0.3s;"></span>
+</button>
+</header>
+<div id="mobile-menu" style="display:none;position:fixed;top:80px;left:0;right:0;background:white;padding:1.5rem;border-bottom:1px solid #e5e7eb;z-index:49;flex-direction:column;gap:0;box-shadow:0 8px 24px rgba(0,0,0,0.1);">
+  <a href="index.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">ГЛАВНАЯ</a>
+  <a href="services.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">УСЛУГИ</a>
+  <a href="fleet.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">АВТОПАРК</a>
+  <a href="contacts.html" style="font-weight:600;color:#374151;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">КОНТАКТЫ</a>
+  <a href="partners.html" style="font-weight:600;color:#e68926;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid #f3f4f6;display:block;">ПАРТНЁРАМ</a>
+  <a href="contacts.html" style="background:#e68926;color:white;padding:1rem;border-radius:0.75rem;font-weight:700;text-decoration:none;text-align:center;display:block;margin-top:1rem;">ПОЛУЧИТЬ РАСЧЕТ</a>
+</div>
+<script>function toggleMobileMenu(){ var m=document.getElementById('mobile-menu'); m.style.display=m.style.display==='flex'?'none':'flex'; }</script>
+
+<main class="pt-20">
+
+<!-- Hero -->
+<section class="py-24 px-gutter max-w-container-max mx-auto text-center">
+  <div class="reveal">
+    <span class="inline-block py-1 px-3 bg-primary-fixed text-on-primary-fixed font-label-md text-label-md rounded uppercase tracking-wider mb-6">Партнёрская программа</span>
+    <h1 class="font-display-lg text-display-lg mb-4">Станьте партнёром A2Group</h1>
+    <p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-10">Зарабатывайте вместе с нами на логистике — выберите формат, который подходит вам</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#types" class="bg-primary-container text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-2xl hover:bg-industrial-orange-glare transition-all shadow-lg">Выбрать формат</a>
+      <a href="#partner-form" class="border-2 border-primary text-primary font-label-lg text-label-lg px-8 py-4 rounded-2xl hover:bg-primary hover:text-on-primary transition-all">Оставить заявку</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3 типа партнёрства -->
+<section id="types" class="py-16 px-gutter max-w-container-max mx-auto">
+  <div class="text-center mb-12 reveal">
+    <h2 class="font-headline-lg text-headline-lg mb-3">Три формата партнёрства</h2>
+    <p class="font-body-lg text-body-lg text-secondary">Выберите то, что подходит именно вам</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- Агент -->
+    <div class="glass-card hover-lift p-8 rounded-3xl flex flex-col reveal">
+      <div class="mb-6 inline-flex p-4 rounded-2xl bg-surface-container-low text-primary w-fit">
+        <span class="material-symbols-outlined text-[36px]">handshake</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md mb-3">Агент</h3>
+      <p class="font-body-md text-body-md text-secondary mb-6 flex-1">Рекомендуете клиентов — получаете процент от каждого рейса. Никаких вложений и обязательств.</p>
+      <ul class="space-y-2 mb-8">
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>До 5% от стоимости каждого рейса</li>
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Выплата в течение 3 дней после рейса</li>
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Личный кабинет для отслеживания</li>
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Без ограничений по количеству клиентов</li>
+      </ul>
+      <a href="contacts.html" class="w-full text-center bg-primary-container text-on-primary font-label-lg text-label-lg py-3 rounded-xl hover:bg-industrial-orange-glare transition-all">Узнать подробнее</a>
+    </div>
+
+    <!-- Субподрядчик -->
+    <div class="glass-card hover-lift p-8 rounded-3xl flex flex-col reveal" style="border: 2px solid #e68926;">
+      <div class="mb-4 inline-flex items-center gap-2">
+        <span class="inline-block bg-primary-container text-on-primary text-label-md font-label-md px-3 py-1 rounded-full">Популярно</span>
+      </div>
+      <div class="mb-6 inline-flex p-4 rounded-2xl bg-primary-container text-on-primary w-fit">
+        <span class="material-symbols-outlined text-[36px]">local_shipping</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md mb-3">Субподрядчик</h3>
+      <p class="font-body-md text-body-md text-secondary mb-6 flex-1">У вас есть транспорт — мы даём загрузку. Стабильные рейсы без простоев.</p>
+      <ul class="space-y-2 mb-8">
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Гарантированная загрузка от 10 рейсов/мес</li>
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Оплата в течение 5 рабочих дней</li>
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Помощь с таможенным оформлением</li>
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Договор и официальное оформление</li>
+      </ul>
+      <a href="contacts.html" class="w-full text-center bg-primary-container text-on-primary font-label-lg text-label-lg py-3 rounded-xl hover:bg-industrial-orange-glare transition-all">Узнать подробнее</a>
+    </div>
+
+    <!-- Франшиза -->
+    <div class="glass-card hover-lift p-8 rounded-3xl flex flex-col reveal">
+      <div class="mb-6 inline-flex p-4 rounded-2xl bg-surface-container-low text-primary w-fit">
+        <span class="material-symbols-outlined text-[36px]">store</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md mb-3">Франшиза</h3>
+      <p class="font-body-md text-body-md text-secondary mb-6 flex-1">Откройте представительство A2Group в своём городе под известным брендом с полной поддержкой.</p>
+      <ul class="space-y-2 mb-8">
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Готовая бизнес-модель и CRM</li>
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Маркетинг и реклама от головного офиса</li>
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Обучение сотрудников включено</li>
+        <li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Окупаемость от 6 месяцев</li>
+      </ul>
+      <a href="contacts.html" class="w-full text-center bg-primary-container text-on-primary font-label-lg text-label-lg py-3 rounded-xl hover:bg-industrial-orange-glare transition-all">Узнать подробнее</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Преимущества -->
+<section class="py-16 px-gutter bg-inverse-surface">
+  <div class="max-w-container-max mx-auto">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-headline-lg text-headline-lg text-surface-pure mb-3">Почему партнёры выбирают нас</h2>
+      <p class="font-body-lg text-body-lg text-surface-variant">4 причины работать с A2Group</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="text-center reveal">
+        <div class="inline-flex p-4 rounded-2xl bg-primary-container text-on-primary mb-4">
+          <span class="material-symbols-outlined text-[32px]">payments</span>
+        </div>
+        <h4 class="font-headline-sm text-headline-sm text-surface-pure mb-2">Стабильные выплаты</h4>
+        <p class="font-body-sm text-body-sm text-surface-variant">Выплачиваем в срок, без задержек. Прозрачная отчётность по каждой транзакции.</p>
+      </div>
+      <div class="text-center reveal">
+        <div class="inline-flex p-4 rounded-2xl bg-primary-container text-on-primary mb-4">
+          <span class="material-symbols-outlined text-[32px]">support_agent</span>
+        </div>
+        <h4 class="font-headline-sm text-headline-sm text-surface-pure mb-2">Личный менеджер</h4>
+        <p class="font-body-sm text-body-sm text-surface-variant">Персональный менеджер на связи 24/7. Решает вопросы быстро и без бюрократии.</p>
+      </div>
+      <div class="text-center reveal">
+        <div class="inline-flex p-4 rounded-2xl bg-primary-container text-on-primary mb-4">
+          <span class="material-symbols-outlined text-[32px]">school</span>
+        </div>
+        <h4 class="font-headline-sm text-headline-sm text-surface-pure mb-2">Обучение</h4>
+        <p class="font-body-sm text-body-sm text-surface-variant">Бесплатное обучение работе с нашими системами, таможней и документооборотом.</p>
+      </div>
+      <div class="text-center reveal">
+        <div class="inline-flex p-4 rounded-2xl bg-primary-container text-on-primary mb-4">
+          <span class="material-symbols-outlined text-[32px]">campaign</span>
+        </div>
+        <h4 class="font-headline-sm text-headline-sm text-surface-pure mb-2">Маркетинг</h4>
+        <p class="font-body-sm text-body-sm text-surface-variant">Маркетинговые материалы, доступ к рекламным инструментам и поддержка при продвижении.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Форма заявки -->
+<section id="partner-form" class="py-24 px-gutter max-w-container-max mx-auto">
+  <div class="max-w-xl mx-auto reveal">
+    <div class="text-center mb-10">
+      <h2 class="font-headline-lg text-headline-lg mb-3">Оставить заявку</h2>
+      <p class="font-body-lg text-body-lg text-secondary">Заполните форму — свяжемся в течение 2 часов</p>
+    </div>
+    <div class="glass-card p-8 rounded-3xl space-y-4">
+      <input id="p-name" type="text" placeholder="Ваше имя" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:outline-none focus:border-primary bg-surface-pure font-body-md text-body-md">
+      <input id="p-phone" type="tel" placeholder="+375 (__) ___-__-__" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:outline-none focus:border-primary bg-surface-pure font-body-md text-body-md">
+      <input id="p-city" type="text" placeholder="Ваш город" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:outline-none focus:border-primary bg-surface-pure font-body-md text-body-md">
+      <select id="p-type" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:outline-none focus:border-primary bg-surface-pure font-body-md text-body-md text-secondary">
+        <option value="" disabled selected>Тип партнёрства</option>
+        <option value="Агент">Агент — рекомендую клиентов</option>
+        <option value="Субподрядчик">Субподрядчик — есть транспорт</option>
+        <option value="Франшиза">Франшиза — открою представительство</option>
+      </select>
+      <button onclick="submitPartnerForm()" class="w-full bg-primary-container text-on-primary font-label-lg text-label-lg py-4 rounded-xl hover:bg-industrial-orange-glare transition-all" id="partner-btn">
+        Отправить заявку
+      </button>
+      <p class="text-center font-body-sm text-body-sm text-secondary opacity-70">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" class="underline hover:text-primary">политикой конфиденциальности</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="w-full py-16 px-gutter grid grid-cols-1 md:grid-cols-4 gap-12 bg-inverse-surface reveal">
+<div class="space-y-4">
+<span class="font-display-lg text-headline-md text-surface-pure cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">A2Group</span>
+<p class="font-body-sm text-body-sm text-surface-variant max-w-xs leading-relaxed">Профессиональные логистические решения для бизнеса любого масштаба. Скорость, надежность, прозрачность.</p>
+<p class="font-body-sm text-body-sm text-surface-variant" style="font-size:0.75rem;margin-top:0.75rem;line-height:1.6;opacity:0.7;">ИП Александрович Егор Александрович<br>УНП 591202839<br>Юр. адрес: г. Лида, ул. Кооперативная 42<br>Режим работы: 24/7</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2 tracking-widest">Навигация</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="index.html">ГЛАВНАЯ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="services.html">УСЛУГИ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="fleet.html">АВТОПАРК</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="contacts.html">КОНТАКТЫ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="partners.html">ПАРТНЁРАМ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="referral.html">РЕФЕРАЛЬНАЯ ПРОГРАММА</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2 tracking-widest">Сервисы</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="tracking.html">ОНЛАЙН-ТРЕКИНГ</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="sla.html">МЕТРИКИ SLA</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="express.html">ЭКСПРЕСС-ДОСТАВКА</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary-fixed uppercase mb-2 tracking-widest">Контакты</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="mailto:info@a2group.by">info@a2group.by</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="tel:+375447009404">+375 (44) 700-94-04</a>
+<span class="font-body-sm text-body-sm text-surface-variant">Минск, ул. Якубова 66</span>
+<span class="font-body-sm text-body-sm text-surface-variant">Москва, Пресненская наб. 12</span>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="privacy.html">Политика конфиденциальности</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary transition-colors" href="cookies.html">Политика Cookie</a>
+<span class="font-body-sm text-body-sm text-surface-variant mt-4 opacity-50">© 2024 A2Group. Все права защищены.</span>
+</div>
+</footer>
+
+<div style="position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:12px;">
+  <a href="https://t.me/a2group_by" target="_blank" style="width:56px;height:56px;border-radius:50%;background:#229ED9;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(34,158,217,0.4);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+  </a>
+  <a href="https://wa.me/375447009404" target="_blank" style="width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"/></svg>
+  </a>
+</div>
+
+<script>
+const TG_TOKEN = '8889299523:AAGCDvfuPsI042hnKcs83-IR3LQydhbPQoQ';
+const TG_CHAT = '558556324';
+async function tgSend(text) {
+  await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ chat_id: TG_CHAT, text: text })
+  });
+}
+async function submitPartnerForm() {
+  const name  = document.getElementById('p-name').value || 'не указано';
+  const phone = document.getElementById('p-phone').value || '';
+  const city  = document.getElementById('p-city').value || 'не указано';
+  const type  = document.getElementById('p-type').value || 'не указано';
+  if (phone.length < 5) { alert('Укажите телефон'); return; }
+  const btn = document.getElementById('partner-btn');
+  btn.textContent = 'Отправляем...'; btn.disabled = true;
+  try {
+    await tgSend(`📋 Новый партнёр!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🏙 Город: ${city}\n🤝 Тип: ${type}\n🕐 ${new Date().toLocaleString('ru-RU')}`);
+    btn.textContent = '✅ Заявка отправлена!'; btn.style.background = '#10B981';
+    ['p-name','p-phone','p-city'].forEach(id => document.getElementById(id).value = '');
+    setTimeout(() => { window.location.href = 'thanks.html'; }, 1500);
+  } catch(e) { btn.textContent = 'Ошибка, попробуйте ещё раз'; btn.disabled = false; }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+</script>
+
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(25,28,29,0.97);backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,0.1);padding:1.25rem 1.5rem;z-index:99998;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+  <p style="color:#e5e7eb;font-size:0.875rem;margin:0;max-width:700px;">🍪 Мы используем файлы cookie. <a href="cookies.html" style="color:#e68926;text-decoration:underline;">Политика cookies</a></p>
+  <button onclick="acceptCookies()" style="background:#e68926;color:white;border:none;padding:0.6rem 1.5rem;border-radius:0.5rem;font-weight:700;font-size:0.875rem;cursor:pointer;">Принять</button>
+</div>
+<script>
+function acceptCookies(){ localStorage.setItem('cookies_accepted','true'); document.getElementById('cookie-banner').style.display='none'; }
+window.addEventListener('load',function(){ if(!localStorage.getItem('cookies_accepted')){ document.getElementById('cookie-banner').style.display='flex'; } });
+</script>
+</body></html>
